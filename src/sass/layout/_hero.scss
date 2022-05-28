@@ -1,0 +1,84 @@
+.hero {
+
+    background-color: $hero-bg-first;
+}
+
+.hero{
+    .container{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+}
+
+.hero__caption {
+    max-width: 218px;
+    padding-top: 194px;
+    margin-bottom: 20px;
+
+    font-family: $secondary-font-family;
+    @include font (48px, 400, 46/48, null);
+    text-transform: uppercase;
+
+    color: $hero-text-first;
+}
+
+.hero__accent {
+    display: block;
+    @include font (26px, null, 30/26, 0.04em);
+
+    color: $hero-text-second;
+}
+
+.hero__list {
+    display: flex;
+    padding-bottom: 158px;
+}
+
+.hero__item+.hero__item {
+    margin-left: 8px;
+}
+
+.hero__link {
+    position: relative;
+    transition: color $hero-duration250ms $hero-time-function;
+    display: block;
+    max-width: 86px;
+    border-radius: 20px;
+    border: transparent;
+    padding: 9px 15px;
+
+    @include font (8px, 400, 10/8, null);
+    cursor: pointer;
+
+    background-color: $hero-text-first;
+    color: $hero-text-second;
+
+    &:hover,
+    &:focus {
+        background-color: $hero-text-second;
+        color: $hero-text-first;
+    }
+}
+
+.hero__img--bg {
+    position: absolute;
+    z-index: -1;
+    top: 86px;
+    left: 36px;
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: $hero-bg-second;
+    
+    @media screen and (min-width:420px){
+        left: auto;
+        right: 36px;
+    }
+}
+
+.hero__img {
+    position: absolute;
+    top: 9px;
+    left: 81px;
+}
