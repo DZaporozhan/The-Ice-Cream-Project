@@ -1,2 +1,11 @@
 $main-font-family: 'DM Sans', sans-serif;
 $secondary-font-family: 'Titan One', cursive;
+
+
+$mobile: 480px;
+$hero-bg-first:#FFB8CA;
+$hero-bg-second: #FFA5BA;
+$hero-text-first:#D41443;
+$hero-text-second:#FFFFFF;
+$hero-duration250ms: 250ms;
+$hero-time-function: cubic-bezier(0.4, 0, 0.2, 1);

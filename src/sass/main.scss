@@ -7,9 +7,9 @@
 @import './utils/mixins';
 @import './utils/hidden';
 @import './utils/variables';
+@import './components/container';
 
 @import './base/reset';
 @import './base/common';
 
-@import './example';
-@import './contact';
+@import './layout/hero';
