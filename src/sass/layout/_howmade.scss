@@ -1,0 +1,137 @@
+.made {
+  background-color: $howmade-bcg-color;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  .container {
+    position: relative;
+  }
+}
+
+.bcg__image {
+  position: absolute;
+  left: 0;
+
+  @media screen and (max-width: 320px) {
+    top: 31%;
+  }
+
+  @media screen and (max-width: 387.98px) {
+    top: 36%;
+  }
+
+  @media screen and (min-width: 388px) {
+    top: 36%;
+  }
+}
+
+.thumb {
+  margin-top: 32px;
+}
+
+.made__label {
+  font-family: 'Titan One';
+  font-style: normal;
+
+  @include font(18px, 400, 1.16, null);
+  color: $hero-bg-second;
+
+  margin-bottom: 15px;
+
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.made__title {
+  font-family: $secondary-font-family;
+  font-style: normal;
+
+  @media screen and (max-width: 320px) {
+    @include font(26px, 400, 1.15, 0.04em);
+  }
+
+  @media screen and (min-width: 320px) {
+    @include font(28px, 400, 1.15, 0.04em);
+  }
+
+  @include font(34px, 400, 1.15, 0.04em);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $hero-text-first;
+}
+
+.modification {
+  margin-left: 14px;
+}
+
+.made__text {
+  @include font(12px, 500, 1.58, null);
+  font-style: normal;
+  width: 220px;
+
+  color: $howmade-text-color;
+  margin-top: 40px;
+}
+
+.made__text--mb {
+  margin-top: 10px;
+}
+
+.made__text--color {
+  color: $show-made-text-color-two;
+}
+
+.made__btn {
+  height: 44px;
+  width: 176px;
+  font-style: normal;
+  @include font(14px, 700, 1.28, null);
+  display: block;
+  text-align: center;
+  border-radius: 20px;
+  background-color: $hero-text-second;
+  color: $hero-text-first;
+  border: none;
+  margin-top: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $show-made-bcg-btn-hover-color;
+  }
+}
+
+.benefits__list {
+  margin-top: 40px;
+}
+
+.benefits__indicator {
+  font-family: $secondary-font-family;
+  font-style: normal;
+  @include font(36px, 400, 1.14, 0.04em);
+
+  text-transform: uppercase;
+  color: $hero-text-first;
+}
+
+.benefits__text {
+  font-style: normal;
+  @include font(12px, 700, 1.66, null);
+
+  color: $howmade-text-color;
+}
+
+.benefits__icon {
+  width: 230px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.benefits__indicator {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+// Ховер ще на кнопки І позиціонування
