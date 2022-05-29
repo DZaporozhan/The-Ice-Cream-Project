@@ -6,6 +6,7 @@
 }
 
 .slider-item {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -24,6 +25,16 @@
   color: #000000;
   margin-bottom: 16px;
 }
+.slide-text::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  color: #c7133e;
+}
+
 .slide-text {
   font-weight: 500;
   font-size: 12px;
@@ -33,4 +44,19 @@
   margin-bottom: 16px;
   background-color: #fafafa;
   padding: 43px 58px 26px 65px;
+}
+.gradient {
+  // width: 180px;
+  // height: 0px;
+  // left: 70px;
+  // top: 4630px;
+
+  // border: 1px solid #e1e1e1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #e1e1e1,
+    #e1e1e1 1px,
+    #fafafa 1px,
+    #fafafa 31px
+  );
 }
