@@ -6,7 +6,6 @@
   // outline: 2px solid tomato;
 
   @include mobile {
-    width: $mobile;
   }
 
   @include tablet {
