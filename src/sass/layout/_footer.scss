@@ -2,11 +2,27 @@
   background-color: $footer-bg-first;
 }
 
+.footer__container {
+  @media screen and (min-width: 768.98px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+  }
+}
+
 .footer__list {
   margin-bottom: 40px;
 
   @media screen and (max-width: 767px) {
     max-width: 234px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
   }
 }
 
@@ -16,16 +32,32 @@
 
 .footer__pretitle {
   font-family: $secondary-font-family;
-  @include font (18px, 400, 21/18, null);
+  @include font(18px, 400, 21/18, null);
   text-transform: uppercase;
   color: $hero-bg-second;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(26px, 400, 30/26, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(30px, 400, 34/30, null);
+  }
 }
 
 .footer__title {
   font-family: $secondary-font-family;
-  @include font (34px, 400, 39/34, 0.04em);
+  @include font(34px, 400, 39/34, 0.04em);
   text-transform: uppercase;
   color: $hero-text-first;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(48px, 400, 55/48, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(58px, 400, 66/58, 0.04em);
+  }
 }
 
 .socials {
@@ -37,7 +69,6 @@
 .socials__item {
   border-radius: 50%;
   background: $footer-bg-second;
-
   transition: background-color $hero-duration250ms $hero-time-function;
 
   &:not(:last-child) {
@@ -47,10 +78,8 @@
   &:hover,
   &:focus {
     background-color: $footer-hover-first;
-    }
   }
-
-
+}
 
 .socials__link {
   display: flex;
@@ -58,7 +87,6 @@
   align-items: center;
   width: 32px;
   height: 32px;
-
   fill: #ffffff;
 }
 
@@ -66,9 +94,16 @@
   display: flex;
   justify-content: end;
   margin-bottom: 40px;
-
-  @include font (12px, 700, 22/12, null);
+  @include font(12px, 700, 22/12, null);
   text-align: right;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(14px, 700, 26/14, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(16px, 700, 30/16, null);
+  }
 }
 
 .footer__tel {
@@ -83,12 +118,16 @@
 }
 
 .footer__text {
-  margin: 0 auto;  
-  @include font (14px, 700, 21/14, null);
+  margin: 0 auto;
+  @include font(14px, 700, 21/14, null);
   text-align: center;
   color: $footer-text-second;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     max-width: 140px;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include font(14px, 700, 21/14, null);
   }
 }
