@@ -8,6 +8,7 @@
   box-shadow: inset 1px 3px 10px rgba(230, 150, 169, 0.5);
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
   &:focus {
     border-color: #d41443;
   }
@@ -29,35 +30,16 @@
   width: 100%;
   margin-bottom: 5px;
 
-  @include font(500, 14px, 1.86);
+  @include font(16px, 500, 1.86);
 
   color: #ffffff;
   &_::placeholder {
-    @include font(500, 14px, 1.86);
+    @include font(12px, 500, 1.86);
 
     color: rgba(255, 255, 255, 0.5);
   }
 }
-.modal-form__textarea {
-  width: 100%;
-  height: 80px;
-  padding: 10px 25px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-shadow: inset 1px 3px 10px rgba(230, 150, 169, 0.5);
-  border-radius: 10px;
-  outline: none;
-  resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus {
-    border: 1px solid #d41443;
-  }
-  &_::placeholder {
-    @include font(500, 14px, 1.86);
-
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
 .wrap-input {
   position: relative;
 }
@@ -74,7 +56,7 @@
   justify-content: center;
   margin-bottom: 15px;
   color: #ffffff;
-  @include font(500, 12px, 1.86);
+  @include font(12px, 500, 1.86);
 
   align-items: center;
 }
@@ -112,7 +94,7 @@
   display: block;
   align-items: center;
   margin-right: auto;
-  @include font(500, 14px, 1.86);
+  @include font(14px, 500, 1.86);
 
   color: #ffffff;
 
@@ -121,7 +103,7 @@
   }
 }
 .order__title {
-  @include font(500, 16px, 1.86);
+  @include font(16px, 500, 1.86);
 
   color: #ffffff;
   margin-bottom: 10px;
@@ -130,9 +112,13 @@
   border-color: #ffb8ca;
   outline: none;
   text-align: center;
-  width: 100px;
+  width: 100%;
   height: 25px;
+  @media screen and (min-width: 320px) {
+    width: 100px;
+  }
   border-radius: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     border-color: #d41443;
@@ -148,8 +134,14 @@
   height: 25px;
   text-align: center;
   border-radius: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     border-color: #d41443;
+  }
+}
+.order__option {
+  @media screen and (max-width: 319px) {
+    @include font(10px, 400, 1.86);
   }
 }
