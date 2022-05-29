@@ -135,6 +135,8 @@
   border: none;
   margin-top: 20px;
 
+  transition: background-color $hero-duration250ms $hero-time-function;
+
   &:hover,
   &:focus {
     background-color: $show-made-bcg-btn-hover-color;
