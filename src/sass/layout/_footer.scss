@@ -37,16 +37,19 @@
 .socials__item {
   border-radius: 50%;
   background: $footer-bg-second;
+
+  transition: background-color $hero-duration250ms $hero-time-function;
+
+  &:not(:last-child) {
+    margin-right: 28px;
   }
 
-.socials__item:not(:last-child) {
-  margin-right: 28px;
-}
-
-.socials__item:hover,
-.socials__item:focus {
-  background-color: $footer-hover-first;
+  &:hover,
+  &:focus {
+    background-color: $footer-hover-first;
+    }
   }
+
 
 
 .socials__link {
