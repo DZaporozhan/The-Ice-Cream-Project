@@ -10,18 +10,20 @@
 .bcg__image {
   position: absolute;
   left: 0;
+  top: 20px;
+  min-width: 320px;
 
-  @media screen and (max-width: 320px) {
-    top: 31%;
-  }
+  // @media screen and (max-width: 320px) {
+  //   top: 31%;
+  // }
 
-  @media screen and (max-width: 387.98px) {
-    top: 36%;
-  }
+  // @media screen and (max-width: 387.98px) {
+  //   top: 36%;
+  // }
 
-  @media screen and (min-width: 388px) {
-    top: 36%;
-  }
+  // @media screen and (min-width: 388px) {
+  //   top: 36%;
+  // }
 }
 
 .thumb {
@@ -64,6 +66,27 @@
 
 .modification {
   margin-left: 14px;
+}
+
+.bcg__image {
+  // background-repeat: no-repeat;
+  // // background-position: center;
+  // // background-size: cover;
+  // background-image: url('../images/howmade/bcg-image-min.png');
+
+  // @media (min-device-pixel-ratio: 2),
+  //   (-webkit-min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url('../images/howmade/bcg-image-2x-min.png');
+  // }
+
+  // @media (min-device-pixel-ratio: 3),
+  //   (-webkit-min-device-pixel-ratio: 3),
+  //   (min-resolution: 288dpi),
+  //   (min-resolution: 3dppx) {
+  //   background-image: url('../images/howmade/bcg-image-3x-min.png');
+  // }
 }
 
 .made__text {
