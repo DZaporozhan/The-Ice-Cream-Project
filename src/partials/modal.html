@@ -1,0 +1,131 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__close btn" data-modal-close>
+      <svg width="18" height="18">
+        <!-- <use href="./images/sprite.svg#icon-close"></use> -->
+      </svg>
+    </button>
+    <p class="modal__title title">Fill in to make an order</p>
+    <form action="#" class="modal-form">
+      <div class="form-field">
+        <label for="user-name" class="modal-form__label">Your name:</label>
+        <div class="wrap-input">
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            class="modal-form__input"
+            placeholder="Name"
+            required
+          />
+          <svg width="18" height="18" class="modal-form__svg">
+            <!-- <use href="./images/icons.svg#icon-person"></use> -->
+          </svg>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="user-phone" class="modal-form__label">Phone number:</label>
+        <div class="wrap-input">
+          <input
+            type="tel"
+            name="user-phone"
+            id="user-phone"
+            class="modal-form__input"
+            placeholder="Phone"
+            required
+          />
+          <svg width="18" height="18" class="modal-form__svg">
+            <!-- <use href="./images/icons.svg#icon-phone"></use> -->
+          </svg>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="user-address" class="modal-form__label">Address:</label>
+        <div class="wrap-input">
+          <input
+            type="adress"
+            name="user-address"
+            id="user-address"
+            class="modal-form__input"
+            placeholder="City, district, street №"
+            required
+          />
+          <svg width="18" height="18" class="modal-form__svg">
+            <!-- <use href=""></use> -->
+          </svg>
+        </div>
+      </div>
+      <fieldset class="order">
+        <legend class="order__title">Your choise</legend>
+        <label class="order__label" for="ice-cream"
+          >Ice Cream
+          <select class="order__select" name="ice-cream" id="ice-cream">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Toffee">Toffee</option>
+          </select>
+          <input
+            class="order__input"
+            type="number"
+            name="quantity"
+            min="0"
+            max="500"
+            step="1"
+            value="0"
+          />
+        </label>
+        <label class="order__label" for="ice-coffee"
+          >Ice Coffee
+          <select class="order__select" name="ice-coffee" id="ice-coffee">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Toffee">Toffee</option>
+          </select>
+          <input
+            class="order__input"
+            type="number"
+            name="quantity"
+            min="0"
+            max="500"
+            step="1"
+            value="0"
+          />
+        </label>
+        <label class="order__label" for="milkshakes"
+          >Milkshakes
+          <select class="order__select" name="milkshakes" id="ilkshakes">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Toffee">Toffee</option>
+          </select>
+          <input
+            class="order__input"
+            type="number"
+            name="quantity"
+            min="0"
+            max="500"
+            step="1"
+            value="0"
+          />
+        </label>
+      </fieldset>
+      <div class="privacy">
+        <input
+          type="checkbox"
+          class="privacy__input visually-hidden"
+          name="modal-check"
+          id="modal-check"
+        />
+        <label class="privacy__text" for="modal-check">
+          <div class="privacy-wrap">
+            <svg width="16" height="15" class="privacy__icon">
+              <!-- <use href="./images/sprite.svg#icon-privacy"></use> -->
+            </svg>
+          </div>
+          I agree to the processing of personal data
+        </label>
+        <button type="submit" class="modal__submit btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
