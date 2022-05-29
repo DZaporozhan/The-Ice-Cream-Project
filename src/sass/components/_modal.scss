@@ -13,8 +13,9 @@
     transform: translate(-50%);
   }
   @include mobile {
-    top: 50%;
-    width: 400px;
+    top: 55%;
+    min-width: 320px;
+    max-width: 420px;
     transform: translate(-50%, -50%);
   }
 
