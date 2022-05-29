@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICECREAM</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +19,20 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body class="body">
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-
+    <include src="./partials/header.html"></include>
     <include src="./partials/hero.html"></include>
+
+    <include src="./partials/howmade.html"></include>
+    <include src="./partials/modal.html"></include>
+    
+    <include src="./partials/gallery.html"></include>
     <include src="./partials/contact.html"></include>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

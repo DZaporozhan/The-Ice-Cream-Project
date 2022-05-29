@@ -8,10 +8,19 @@
 @import './utils/hidden';
 @import './utils/variables';
 @import './components/container';
+@import './components/modal';
+@import './components/modal-form';
+@import './components/backdrop';
 
 @import './base/reset';
 @import './base/common';
 
+@import './layout/header';
 @import './layout/hero';
 
-@import './layout/contact'
+@import './layout/howmade';
+
+@import './layout/gallery';
+
+@import './layout/contact';
+
