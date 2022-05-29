@@ -2,29 +2,45 @@
   background-color: $howmade-bcg-color;
   padding-top: 40px;
   padding-bottom: 80px;
-  .container {
-    position: relative;
-  }
+  //   .container {
+  //     position: relative;
+  //   }
+  position: relative;
 }
 
-.bcg__image {
+.milk__left {
   position: absolute;
   left: 0;
-  top: 20px;
-  min-width: 320px;
-
-  // @media screen and (max-width: 320px) {
-  //   top: 31%;
-  // }
-
-  // @media screen and (max-width: 387.98px) {
-  //   top: 36%;
-  // }
-
-  // @media screen and (min-width: 388px) {
-  //   top: 36%;
-  // }
+  top: 36%;
 }
+
+.made {
+  position: relative;
+}
+
+.milk__left {
+  position: absolute;
+  left: 0;
+  top: 36%;
+}
+
+.milk__right {
+  position: absolute;
+  right: 0;
+  top: 36%;
+}
+
+// @media screen and (max-width: 320px) {
+//   top: 31%;
+// }
+
+// @media screen and (max-width: 387.98px) {
+//   top: 36%;
+// }
+
+// @media screen and (min-width: 388px) {
+//   top: 36%;
+// }
 
 .thumb {
   margin-top: 32px;
@@ -147,14 +163,101 @@
 
 .benefits__icon {
   width: 230px;
+
   &:not(:last-child) {
     margin-bottom: 32px;
   }
 }
-
 .benefits__indicator {
-  margin-top: 16px;
+  display: grid;
   margin-bottom: 16px;
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
 }
 
-// Ховер ще на кнопки І позиціонування
+.benefits__indicator--icecream::before {
+  content: '';
+  margin-bottom: 16px;
+  width: 33px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../images/howmade/icecream-mob-min.png ');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/howmade/icecream-mob-2x-min.png');
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url('../images/howmade/icecream-mob-3x-min.png');
+  }
+}
+
+.benefits__indicator--bucket::before {
+  content: '';
+  margin-bottom: 16px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../images/howmade/bucket-mob-min.png ');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/howmade/bucket-mob-2x-min.png');
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url('../images/howmade/bucket-mob-3x-min.png');
+  }
+}
+
+.benefits__indicator--candy::before {
+  content: '';
+  margin-bottom: 16px;
+  width: 44px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../images/howmade/candy-mob-min.png ');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/howmade/candy-mob-2x-min.png');
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url('../images/howmade/candy-mob-3x-min.png');
+  }
+}
+
+// .benefits__indicator::before {
+//   content: '';
+//   width: 80px;
+//   height: 80px;
+//   background-color: teal;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   background-image: url('../images/howmade/bucket-mob-min.png ');
+// }
