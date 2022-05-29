@@ -22,7 +22,7 @@
 }
 .header-branch {
   padding: 8px 20px 25px 20px;
-  position: fixed;
+  position: absolute;
   @include mobile {
     width: 480px;
   }
@@ -62,7 +62,7 @@
   top: 0;
   right: 0;
   background-color: $header-bg-color;
-  height: 100vh;
+  height: 507px;
   width: 250px;
   z-index: 5;
   padding-top: 60px;
