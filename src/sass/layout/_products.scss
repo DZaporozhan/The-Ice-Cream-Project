@@ -1,0 +1,163 @@
+.products {
+    // margin-left: auto;
+    // margin-right: auto;
+
+    // padding-left: 20px;
+    // padding-right: 20px;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    background-color: $products-main-bg;
+}
+
+.products-pre-tite {
+
+    margin-bottom: 15px;
+
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $products-pre-color;
+}
+
+.products-title {
+
+    margin-bottom: 8px;
+
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $products-title-color;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 0;
+    }
+}
+
+////Cards
+
+.product-set {
+
+
+    outline: 2px solid tomato;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: 768px) {
+            margin-right: 16px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin-right: 32px;
+        }
+    }
+}
+
+.product-card {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    text-align: center;
+    
+
+    &__thumb {
+        display: flex;
+        justify-content: center;
+
+        height: 140px;
+
+        position: relative;       
+        
+        background-color: transparent;
+
+        // outline: 2px solid tomato;
+    }
+
+    &__img {
+           
+        position: absolute;
+
+        transform: translatex(-50%,);
+
+        outline: 2px solid tomato;
+        
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+    &__info {
+        padding: 160px 40px 40px 40px;
+        border-radius: 24px;
+    }
+
+    &__info--rose {
+        background-color: $products-icecrem-bg;               
+    }
+    &__info--coffee {
+        background-color: $products-coffee-bg;               
+    }
+    &__info--pistacho {
+        background-color: $products-shakes-bg;               
+    }
+
+    &__title {
+
+        display: block;
+        
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    
+        color: $products-text-color;
+
+    }
+
+    &__icon {
+
+    }
+
+    &__text {
+
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.56;
+        text-align: center;
+        letter-spacing: 0.04em;
+    
+        color: #FFFFFF;
+
+    }
+
+    &__btn {
+
+    }
+}
