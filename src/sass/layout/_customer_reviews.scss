@@ -19,8 +19,14 @@
 
 .slide-img {
   border-radius: 50%;
-  margin-top: 20px;
-  margin-bottom: 32px;
+  // margin-top: 20px;
+  // margin-bottom: 32px;
+}
+
+.slider-item__comment {
+  margin-bottom: 16px;
+  background-color: #fafafa;
+  padding: 43px 58px 26px 65px;
 }
 .slide-item__comment {
   position: relative;
