@@ -4,17 +4,77 @@
             <span class="hero__accent">ice cream made with</span>
             passion
         </h1>
+        <div class="statistic__wrap">
+            <div class="statistic__bg hero__bg--first"></div>
+            <p class="statistic__number hero__number--first">16</p>
+            <p class="statistic__text hero__text--first">cafes</p>
+            <div class="statistic__bg hero__bg--second"></div>
+            <p class="statistic__number hero__number--second">23</p>
+            <p class="statistic__text hero__text--second">food trucks</p>
+        </div>
         <ul class="hero__list list">
-            <li class="hero__item"><a class="hero__link link" href="./#Products">Products</a></li>
-            <li class="hero__item"><a class="hero__link link" href="./#How-its-made">How it&#39;s made?</a></li>
+            <li class="hero__item"><a class="hero__link link" href="./#products">Products</a></li>
+            <li class="hero__item"><a class="hero__link hero__link--accent link" href="./#made__title">How it&#39;s
+                    made?</a></li>
         </ul>
-        <picture class="hero__img--bg">
+        <p class="hero__after-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et</p>
+        <button type="button" class="hero__btn">
+            <svg width="6px" height="6px">
+                <use href="./images/icons.svg#icon-arrow"></use>
+            </svg>
+        </button>
+        <picture>
+            <source srcset="
+            ./images/hero/milk-desktop-x1.png 1x,
+            ./images/hero/milk-desktop-x2.png 2x,
+            ./images/hero/milk-tablet-x3.png 3x" media="(min-width:1280px)">
+            <source srcset="
+            ./images/hero/milk-tablet-x1.png 1x,
+            ./images/hero/milk-tablet-x2.png 2x,
+            ./images/hero/milk-tablet-x3.png 3x" media="(min-width:768px)">
+            <img class="hero__img-second" src="./images/hero/milk-tablet-x1.png" alt="ice cream">
+        </picture>
+        <picture class="hero__img-main--bg">
+            <div class="animation">
+                <img class="animation__picture0" src="./images/hero/hero-animation/horn.png" alt="ice cream horn">
+                <img class="animation__picture1" src="./images/hero/hero-animation/ice1.png"
+                    alt="scoop of ice cream pink">
+                <img class="animation__picture2" src="./images/hero/hero-animation/ice2.png"
+                    alt="scoop of ice cream gold">
+                <img class="animation__picture3" src="./images/hero/hero-animation/ice3.png"
+                    alt="scoop of ice cream green">
+                <img class="animation__picture4" src="./images/hero/hero-animation/ice4.png"
+                    alt="scoop of ice cream orange">
+                <img class="animation__picture5" src="./images/hero/hero-animation/ice5.png"
+                    alt="scoop of ice cream yellow">
+                <img class="animation__picture6" src="./images/hero/hero-animation/ice6.png"
+                    alt="scoop of ice cream white">
+            </div>
+            <source srcset="
+            ./images/hero/icecream-desktop-x1.png 1x,
+            ./images/hero/icecream-desktop-x2.png 2x,
+            ./images/hero/icecream-desktop-x3.png 3x" media="(min-width:1280px)">
+            <source srcset="
+            ./images/hero/icecream-tablet-x1.png 1x,
+            ./images/hero/icecream-tablet-x2.png 2x,
+            ./images/hero/icecream-tablet-x3.png 3x" media="(min-width:768px)">
             <source srcset="
             ./images/hero/icecream-mob-x1.png 1x,
             ./images/hero/icecream-mob-x2.png 2x,
-            ./images/hero/icecream-mob-x3.png 3x" 
-            media="(max-width:767px)">
-            <img class="hero__img" src="./images/hero/icecream-mob-x1.png" alt="ice cream">
+            ./images/hero/icecream-mob-x3.png 3x" media="(max-width:767px)">
+            <img class="hero__img-main" src="./images/hero/icecream-mob-x1.png" alt="ice cream">
+        </picture>
+        <picture>
+            <source srcset="
+            ./images/hero/tasty-desktop-x1.png 1x,
+            ./images/hero/tasty-desktop-x2.png 2x,
+            ./images/hero/tasty-desktop-x3.png 3x" media="(min-width:1280px)">
+            <source srcset="
+            ./images/hero/tasty-tablet-x1.png 1x,
+            ./images/hero/tasty-tablet-x2.png 2x,
+            ./images/hero/tasty-tablet-x3.png 3x" media="(min-width:768px)">
+            <img class="hero__img-third" src="./images/hero/tasty-tablet-x1.png" alt="ice cream">
         </picture>
     </div>
 </section>
