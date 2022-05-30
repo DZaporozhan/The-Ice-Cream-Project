@@ -19,8 +19,8 @@
 
 .slide-img {
   border-radius: 50%;
-  // margin-top: 20px;
-  // margin-bottom: 32px;
+  margin-top: 20px;
+  margin-bottom: 32px;
 }
 
 .slider-item__comment {
@@ -95,4 +95,23 @@
 .slide-item__footer {
   display: flex;
   margin-bottom: 32px;
+}
+
+.swiper-pagination-bullet {
+  background: #d9d9d9;
+  opacity: inherit;
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet-active {
+  background-image: url('../images/home-icon.png');
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  border-radius: 0%;
+  background-color: transparent;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
 }
