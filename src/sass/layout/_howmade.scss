@@ -2,16 +2,10 @@
   background-color: $howmade-bcg-color;
   padding-top: 40px;
   padding-bottom: 80px;
-  //   .container {
-  //     position: relative;
-  //   }
-  position: relative;
-}
-
-.milk__left {
-  position: absolute;
-  left: 0;
-  top: 36%;
+  .container {
+    position: relative;
+  }
+  // position: relative;
 }
 
 .made {
@@ -21,29 +15,57 @@
 .milk__left {
   position: absolute;
   left: 0;
+
   top: 36%;
+
+  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 319.98px) {
+    top: 33%;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 344.98px) {
+    top: 37%;
+  }
+
+  @media screen and (min-width: 345px) {
+    top: 36%;
+  }
 }
 
 .milk__right {
   position: absolute;
   right: 0;
-  top: 36%;
+
+  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 320px) {
+    top: 31%;
+  }
+
+  @media screen and (min-width: 345px) {
+    top: 36%;
+  }
+
+  @media screen and (max-width: 387.98px) {
+    top: 36%;
+  }
+
+  @media screen and (min-width: 388px) {
+    top: 36%;
+  }
 }
-
-// @media screen and (max-width: 320px) {
-//   top: 31%;
-// }
-
-// @media screen and (max-width: 387.98px) {
-//   top: 36%;
-// }
-
-// @media screen and (min-width: 388px) {
-//   top: 36%;
-// }
 
 .thumb {
   margin-top: 32px;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .made__label {
@@ -52,6 +74,10 @@
 
   @include font(18px, 400, 1.16, null);
   color: $hero-bg-second;
+
+  @include tablet {
+    @include font(26px, 400, 1.15, null);
+  }
 
   margin-bottom: 15px;
 
@@ -65,14 +91,18 @@
   font-style: normal;
 
   @media screen and (max-width: 320px) {
-    @include font(26px, 400, 1.15, 0.04em);
+    @include font(20px, 400, 1.15, 0.04em);
   }
 
-  @media screen and (min-width: 320px) {
-    @include font(28px, 400, 1.15, 0.04em);
+  @include mobile {
+    @include font(34px, 400, 1.15, 0.04em);
   }
 
-  @include font(34px, 400, 1.15, 0.04em);
+  @include tablet {
+    @include tablet {
+      @include font(48px, 400, 1.14, null);
+    }
+  }
 
   text-align: center;
   text-transform: uppercase;
@@ -84,42 +114,58 @@
   margin-left: 14px;
 }
 
-.bcg__image {
-  // background-repeat: no-repeat;
-  // // background-position: center;
-  // // background-size: cover;
-  // background-image: url('../images/howmade/bcg-image-min.png');
+// .bcg__image {
+//   // background-repeat: no-repeat;
+//   // // background-position: center;
+//   // // background-size: cover;
+//   // background-image: url('../images/howmade/bcg-image-min.png');
 
-  // @media (min-device-pixel-ratio: 2),
-  //   (-webkit-min-device-pixel-ratio: 2),
-  //   (min-resolution: 192dpi),
-  //   (min-resolution: 2dppx) {
-  //   background-image: url('../images/howmade/bcg-image-2x-min.png');
-  // }
+//   // @media (min-device-pixel-ratio: 2),
+//   //   (-webkit-min-device-pixel-ratio: 2),
+//   //   (min-resolution: 192dpi),
+//   //   (min-resolution: 2dppx) {
+//   //   background-image: url('../images/howmade/bcg-image-2x-min.png');
+//   // }
 
-  // @media (min-device-pixel-ratio: 3),
-  //   (-webkit-min-device-pixel-ratio: 3),
-  //   (min-resolution: 288dpi),
-  //   (min-resolution: 3dppx) {
-  //   background-image: url('../images/howmade/bcg-image-3x-min.png');
-  // }
-}
+//   // @media (min-device-pixel-ratio: 3),
+//   //   (-webkit-min-device-pixel-ratio: 3),
+//   //   (min-resolution: 288dpi),
+//   //   (min-resolution: 3dppx) {
+//   //   background-image: url('../images/howmade/bcg-image-3x-min.png');
+//   // }
+// }
 
 .made__text {
   @include font(12px, 500, 1.58, null);
   font-style: normal;
   width: 220px;
 
+  @include tablet {
+    @include tablet {
+      @include font(14px, 400, 1.8, null);
+    }
+  }
+
+  @include tablet {
+    width: 334px;
+  }
+
   color: $howmade-text-color;
   margin-top: 40px;
-}
 
-.made__text--mb {
-  margin-top: 10px;
+  .made__text--mb {
+    margin-top: 10px;
+  }
 }
 
 .made__text--color {
   color: $show-made-text-color-two;
+}
+
+.about {
+  @include tablet {
+    margin-left: 34px;
+  }
 }
 
 .made__btn {
@@ -135,6 +181,10 @@
   border: none;
   margin-top: 20px;
 
+  @include tablet {
+    @include font(16px, 700, 1.31, null);
+  }
+
   transition: background-color $hero-duration250ms $hero-time-function;
 
   &:hover,
@@ -145,12 +195,32 @@
 
 .benefits__list {
   margin-top: 40px;
+
+  @include tablet {
+    display: flex;
+    margin-top: 80px;
+  }
 }
 
 .benefits__indicator {
   font-family: $secondary-font-family;
   font-style: normal;
   @include font(36px, 400, 1.14, 0.04em);
+
+  @include tablet {
+    @include font(48px, 400, 1.14, 0.04em);
+  }
+
+  display: grid;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 13px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
 
   text-transform: uppercase;
   color: $hero-text-first;
@@ -160,27 +230,35 @@
   font-style: normal;
   @include font(12px, 700, 1.66, null);
 
+  @include tablet {
+    @include font(14px, 700, 1.71, null);
+  }
+
   color: $howmade-text-color;
 }
 
 .benefits__icon {
   width: 230px;
 
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @include tablet {
+    width: 200px;
   }
-}
-.benefits__indicator {
-  display: grid;
-  margin-bottom: 16px;
-  &:not(:first-child) {
-    margin-top: 16px;
+
+  @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }
 
 .benefits__indicator--icecream::before {
   content: '';
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
   width: 33px;
   height: 50px;
   background-repeat: no-repeat;
@@ -206,6 +284,11 @@
 .benefits__indicator--bucket::before {
   content: '';
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
@@ -231,6 +314,11 @@
 .benefits__indicator--candy::before {
   content: '';
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
   width: 44px;
   height: 50px;
   background-repeat: no-repeat;
