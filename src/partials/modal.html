@@ -1,6 +1,25 @@
 <div class="backdrop is-hidden" data-modal>
   <div class="modal-wrap">
-    <div class="modal-photo"></div>
+    <div class="modal-photo">
+      <p class="modal-photo__text">Hot summer sale</p>
+      <picture class="modal-photo__img">
+        <source
+          srcset="
+            ../images/modal/ice-cream-desktop-1x.jpg 1x,
+            ../images/modal/ice-cream-desktop-2x.jpg 2x,
+            ../images/modal/ice-cream-desktop-3x.jpg 3x
+          "
+          media="(min-width: 1280px)" />
+        <source
+          srcset="
+            ../images/modal/ice-cream-tablet-1x.jpg 1x,
+            ../images/modal/ice-cream-tablet-2x.jpg 2x,
+            ../images/modal/ice-cream-tablet-3x.jpg 3x
+          "
+          media="(min-width: 768px)" />
+        <img src="../images/modal/ice-cream-tablet-1x.jpg" alt="Ice Cream"
+      /></picture>
+    </div>
     <div class="modal">
       <button class="modal__close btn" data-modal-close>
         <svg width="18" height="18">
