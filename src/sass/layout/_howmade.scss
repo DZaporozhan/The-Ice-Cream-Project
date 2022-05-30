@@ -12,6 +12,14 @@
   position: relative;
 }
 
+.about-picture {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 // .milk__left {
 //   position: absolute;
 //   left: 0;
@@ -70,14 +78,27 @@
 .milk__mob {
   position: absolute;
   left: 0;
-  bottom: 62%;
-
+  bottom: 56%;
   @include mobile {
-    bottom: 59%;
+    bottom: 54%;
+    // left: 8%;
+    // bottom: 54%;
   }
 
+  // @media screen and (min-width: 388px) and (max-width: 768px) {
+  //   left: 76px;
+  //   right: 0%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   display: inline-table;
+  // }
+
   @media screen and (min-width: 345px) {
-    bottom: 60%;
+    bottom: 55%;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -169,6 +190,11 @@
   font-style: normal;
   width: 220px;
 
+  // @media screen and (max-width: 768px) {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
   @include tablet {
     @include font(14px, 400, 1.8, null);
     width: 334px;
@@ -222,6 +248,12 @@
   border: none;
   margin-top: 20px;
 
+  // @media screen and (max-width: 768px) {
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
   @include tablet {
     @include font(16px, 700, 1.31, null);
     margin-top: 40px;
@@ -247,6 +279,7 @@
 .benefits__indicator {
   font-family: $secondary-font-family;
   font-style: normal;
+
   @include font(36px, 400, 1.14, 0.04em);
 
   @include tablet {
@@ -290,6 +323,10 @@
 
 .benefits__icon {
   width: 230px;
+  // @media screen and (max-width: 768px) {
+  //   margin-right: auto;
+  //   margin-left: auto;
+  // }
 
   @include tablet {
     width: 200px;
