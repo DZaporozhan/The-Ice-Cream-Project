@@ -18,27 +18,58 @@
     z-index: 2;
   }
 }
-.test {
-  position: fixed;
+.header-unity {
   @media screen and (max-width: 479px) {
     width: 100%;
   }
   @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 480px;
   }
+  @media screen and (max-width: 767px) {
+    position: fixed;
+  }
+  @include tablet {
+    width: 768px;
+  }
 }
 .header-branch {
-  padding: 8px 20px 25px 20px;
+  background-color: #ffb8ca;
+  padding: 8px 20px 5px 20px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 32px 10px 32px;
+    background-color: transparent;
+  }
+}
+.header-branch .menu-buy {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 160px;
+  }
 }
 .header-logo {
 }
-.menu-open-btn,
+.menu-open-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  @include tablet {
+    top: 35px;
+    right: 220px;
+  }
+}
 .menu-close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
   padding: 0;
   background-color: transparent;
+  @include tablet {
+  }
 }
 .menu-icon {
   fill: $header-text-first;
@@ -54,7 +85,9 @@
   //     fill: $header-text-first;
   //   }
 }
-
+.mob-menu-wrap {
+  padding-left: 20px;
+}
 .mob-menu {
   top: 0;
   right: 0;
@@ -68,18 +101,28 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
+  @include tablet {
+    width: 254px;
+  }
 }
 
 .menu-buy {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  margin-left: 20px;
+  // margin-left: 20px;
 
   width: 209px;
   height: 44px;
   border-radius: 22px;
   color: $header-text-first;
+  @include tablet {
+    width: 186px;
+    // padding: 12px;
+  }
+}
+.menu-buy-wrap {
+  padding-left: 14px;
 }
 .menu-list {
   margin-top: 32px;
@@ -91,7 +134,7 @@
   display: flex;
   align-items: center;
   border-top: 1px solid #e18298;
-  padding: 11px 0 12px 20px;
+  padding: 12px 0;
   width: 100%;
   &:last-child {
     border-bottom: 1px solid #e18298;
