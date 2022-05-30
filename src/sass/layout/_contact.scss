@@ -1,0 +1,137 @@
+.contact {
+    
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-image: linear-gradient(180deg, #fff 25%, #fff5f6 0);
+    
+   
+}
+.contact__list {
+    
+    
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+.contact__list:nth-child(3) {
+    margin-bottom: 0px;
+}
+
+.contact__container {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $hero-text-second;
+
+    border: 1px solid $hero-text-second;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgb(212 20 67 / 10%);
+}
+
+.contact__cafe {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 80px;
+    
+    text-align: center;
+    font-family: $main-font-family;
+    @include font (12px, 500, 22/12, null);
+    
+        background-color: #F0D1A5;
+        color: $hero-text-second;
+}
+
+.contact__city {
+    margin-bottom: 8px;
+    font-family: $main-font-family;
+    @include font (12px, 500, 22/12, null)
+    
+}
+
+.contact__about {
+    font-family: $main-font-family;
+    @include font (12px, 500, 18/12, null);
+
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+    color: #907E82;
+    
+}
+
+.contact__day {
+    font-family: $main-font-family;
+    @include font (12px, 500, 22/12, null);
+
+    padding-top: 24px;
+}
+
+.weekend{
+    padding-top: 0px
+}
+
+.contact__time {
+    display: block;
+    color: $hero-bg-second;
+    padding-bottom: 24px;
+    font-family: $main-font-family;
+    @include font (12px, 500, 22/12, null)
+    
+    
+}
+
+.contact__data {
+    padding-top: 24px;
+border-top: 1px solid #E1E1E1;
+    
+}
+
+.contact__link {
+    display: block;
+    color: #907E82;
+    font-family: $main-font-family;
+    @include font (12px, 500, 18/12, null)
+}
+
+.cafe {
+    display: inline-block;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        width: 130px;
+        
+        text-align: center;
+    
+        @include font (12px, 500, 22/12, null);
+    background-color: #C2E297;
+        color: $hero-text-second;
+        font-family: $main-font-family;
+        
+}
+
+.contact__btn {
+    display: block;
+    font-family: $main-font-family;
+    @include font (16px, 400, 21/16, null);
+    
+    text-align: center;
+    border: 1px transparent;
+    cursor: pointer;
+    border-radius: 22px;
+    height: 44px;
+    width: 161px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.first-btn {
+margin-top: 32px;
+margin-bottom: 20px;
+background-color: $hero-text-first;
+color: $hero-text-second;
+}
+.second-btn {
+    background-color: $hero-text-second;
+    color: $hero-text-first;
+
+}

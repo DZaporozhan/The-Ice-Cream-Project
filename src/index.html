@@ -17,15 +17,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
 
+    <include src="./partials/header.html"></include>
     <include src="./partials/hero.html"></include>
-    <!-- <include src="./partials/contact.html"></include> -->
+    <include src="./partials/modal.html"></include>
+    <include src="./partials/products.html"></include>
+    <include src="./partials/howmade.html"></include>
+    <include src="./partials/gallery.html"></include>
     <include src="./partials/customer_reviews.html"></include>
+    <include src="./partials/contact.html"></include>
+    <include src="./partials/footer.html"></include>
 
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -42,5 +53,12 @@
         },
       });
     </script>
+    <!-- <script src="./js/mobile-menu.js"></script>
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQ17UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUD6p/yBuuM0/8jI7029YRZ2uBlA=="
+    crossorigin="anonymous"
+    ></script> -->
   </body>
 </html>
