@@ -1,16 +1,15 @@
 .contact {
     
-    padding-top: 48px;
     padding-bottom: 48px;
     background-image: linear-gradient(180deg, #fff 25%, #fff5f6 0);
     
     @media screen and (min-width: 768px){
-    padding-top: 80px;
+   
     padding-bottom: 40px;
     }
 
     @media screen and (min-width: 1280px) {
-     padding-top: 120px;
+     
      padding-bottom: 120px;
         }
    
@@ -136,6 +135,7 @@
 
      @media screen and (min-width: 1280px) {
     @include font (16px, 500, 29/16, null);
+        max-width: 250px;
           }
     
 }
@@ -235,6 +235,7 @@ border-top: 1px solid #E1E1E1;
 
 }
 .contact__btn {
+
     display: block;
     font-family: $main-font-family;
     @include font (16px, 700, 21/16, null);
@@ -247,6 +248,7 @@ border-top: 1px solid #E1E1E1;
     width: 161px;
     margin-right: auto;
     margin-left: auto;
+    transition: background-color $hero-duration250ms $hero-time-function;
 
     @media screen and (min-width: 768px){
         display: inline-block;
@@ -258,7 +260,7 @@ margin-top: 32px;
 background-color: $hero-text-first;
 color: $hero-text-second;
 
-transition: $hero-time-function;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 @media screen and (max-width: 767px){
 margin-bottom: 20px;
@@ -291,3 +293,6 @@ margin-right: 14px;
 background-color:$show-made-bcg-btn-hover-color;
 
 }
+    // .first-svg {
+    //     fill: white;
+    // }
