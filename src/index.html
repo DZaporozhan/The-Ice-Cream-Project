@@ -18,6 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
@@ -28,6 +29,7 @@
     <include src="./partials/products.html"></include>
     <include src="./partials/howmade.html"></include>
     <include src="./partials/gallery.html"></include>
+    <include src="./partials/customer_reviews.html"></include>
     <include src="./partials/contact.html"></include>
     <include src="./partials/footer.html"></include>
 
@@ -35,6 +37,22 @@
     <script src="./index.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        pagination: {
+          clickable: true,
+          el: '.swiper-pagination',
+        },
+      });
+    </script>
     <!-- <script src="./js/mobile-menu.js"></script>
     <script
     defer
