@@ -25,10 +25,11 @@
   & img {
     cursor: pointer;
     border-radius: 5px;
-    transition: transform $hero-duration250ms $hero-time-function;
+    transition: transform $hero-duration250ms $hero-time-function,
+      box-shadow $hero-duration250ms $hero-time-function;
     &:hover {
-      transform: scale(1.1);
-      z-index: 1000;
+      transform: scale(1.2);
+      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.85);
     }
   }
 }
@@ -107,4 +108,7 @@
   grid-column: 7 / 8;
   grid-row: 2 / 3;
   transform: translateY(-15%);
+}
+.active {
+  z-index: 5;
 }
