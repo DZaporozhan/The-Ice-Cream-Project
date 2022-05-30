@@ -31,6 +31,9 @@
   @include tablet {
     width: 768px;
   }
+  @include desktop {
+    width: 1280px;
+  }
 }
 .header-branch {
   background-color: #ffb8ca;
@@ -60,6 +63,9 @@
   @include tablet {
     top: 35px;
     right: 220px;
+  }
+  @include desktop {
+    display: none;
   }
 }
 .menu-close-btn {
@@ -164,4 +170,50 @@
   //     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-buy-btn {
+}
+
+.header-nav {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+.header-nav-list {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
+.header-nav-item {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    & + & {
+      margin-left: 35px;
+    }
+  }
+}
+.header-nav-link {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: $header-text-first;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
 }
