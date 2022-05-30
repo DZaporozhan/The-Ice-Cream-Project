@@ -3,32 +3,45 @@
     <label class="made__label" for="made__title">tradition and love</label>
     <h1 class="made__title" id="made__title">how it’s made?</h1>
     <div class="thumb">
-      <picture class="picture">
-        <source
-          media="(min-width:320px)"
-          srcset="
-            ./images/howmade/cow-mob-min.png    1x,
-            ./images/howmade/cow-mob-2x-min.png 2x,
-            ./images/howmade/cow-mob-3x-min.png 3x
-          "
-        />
-        <img src="./images/howmade/cow-mob-min.png" alt="Cow and Milk" />
-      </picture>
-      <p class="made__text">
-        Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
-        lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
-      </p>
-      <p class="made__text made__text--color">
-        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
-        in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
-        maximus. Cras massa nibh, tincidunt.
-      </p>
-      <p class="made__text made__text--color made__text--mb">
-        Aliquam erat volutpat. Aenean accumsan.
-      </p>
-      <button class="made__btn" type="button">
-        Read more <span class="modification">&#62;</span>
-      </button>
+      <div class="about-picture">
+        <picture>
+          <source
+            media="(min-width:768px)"
+            srcset="
+              ./images/howmade/cow-tablet-min.png    1x,
+              ./images/howmade/cow-tablet-2x-min.png 2x,
+              ./images/howmade/cow-tablet-3x-min.png 3x
+            "
+          />
+
+          <source
+            media="(min-width:320px)"
+            srcset="
+              ./images/howmade/cow-mob-min.png    1x,
+              ./images/howmade/cow-mob-2x-min.png 2x,
+              ./images/howmade/cow-mob-3x-min.png 3x
+            "
+          />
+          <img src="./images/howmade/cow-mob-min.png" alt="Cow and Milk" />
+        </picture>
+      </div>
+      <div class="about">
+        <p class="made__text">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="made__text made__text--color">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
+          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
+          maximus. Cras massa nibh, tincidunt.
+        </p>
+        <p class="made__text made__text--color made__text--mb">
+          Aliquam erat volutpat. Aenean accumsan.
+        </p>
+        <button class="made__btn" type="button">
+          Read more <span class="modification">&#62;</span>
+        </button>
+      </div>
     </div>
     <div class="milk__left">
       <!-- <picture>
