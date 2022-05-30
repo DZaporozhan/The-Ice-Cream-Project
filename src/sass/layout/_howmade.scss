@@ -12,51 +12,72 @@
   position: relative;
 }
 
-.milk__left {
+// .milk__left {
+//   position: absolute;
+//   left: 0;
+
+//   top: 36%;
+
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+
+//   @media screen and (max-width: 319.98px) {
+//     top: 33%;
+//   }
+
+//   @media screen and (min-width: 320px) and (max-width: 344.98px) {
+//     top: 37%;
+//   }
+
+//   @media screen and (min-width: 345px) {
+//     top: 36%;
+//   }
+// }
+
+// .milk__right {
+//   position: absolute;
+//   right: 0;
+
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+
+//   @media screen and (max-width: 320px) {
+//     top: 31%;
+//   }
+
+//   @media screen and (min-width: 345px) {
+//     top: 36%;
+//   }
+
+//   @media screen and (max-width: 387.98px) {
+//     top: 36%;
+//   }
+
+//   @media screen and (min-width: 388px) {
+//     top: 36%;
+//   }
+// }
+
+.milk__desktop {
   position: absolute;
-  left: 0;
-
-  top: 36%;
-
-  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  @media screen and (min-width: 0px) and (max-width: 1279.98px) {
     display: none;
-  }
-
-  @media screen and (max-width: 319.98px) {
-    top: 33%;
-  }
-
-  @media screen and (min-width: 320px) and (max-width: 344.98px) {
-    top: 37%;
-  }
-
-  @media screen and (min-width: 345px) {
-    top: 36%;
   }
 }
 
-.milk__right {
+.milk__mob {
   position: absolute;
-  right: 0;
+  left: 0;
+  bottom: 62%;
 
-  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
-    display: none;
-  }
-
-  @media screen and (max-width: 320px) {
-    top: 31%;
+  @include mobile {
+    bottom: 59%;
   }
 
   @media screen and (min-width: 345px) {
-    top: 36%;
-  }
-
-  @media screen and (max-width: 387.98px) {
-    top: 36%;
-  }
-
-  @media screen and (min-width: 388px) {
-    top: 36%;
+    bottom: 60%;
   }
 }
 
@@ -77,6 +98,10 @@
 
   @include tablet {
     @include font(26px, 400, 1.15, null);
+  }
+
+  @include desktop {
+    @include font(30px, 400, 1.13, null);
   }
 
   margin-bottom: 15px;
@@ -102,6 +127,10 @@
     @include tablet {
       @include font(48px, 400, 1.14, null);
     }
+  }
+
+  @include desktop {
+    @include font(58px, 400, 1.14, null);
   }
 
   text-align: center;
@@ -141,13 +170,15 @@
   width: 220px;
 
   @include tablet {
-    @include tablet {
-      @include font(14px, 400, 1.8, null);
-    }
+    @include font(14px, 400, 1.8, null);
+    width: 334px;
   }
 
-  @include tablet {
-    width: 334px;
+  @include desktop {
+    @include font(16px, 400, 1.75, null);
+    width: 463px;
+
+    // font-size: 18px;
   }
 
   color: $howmade-text-color;
@@ -162,9 +193,20 @@
   color: $show-made-text-color-two;
 }
 
+.made__text--size {
+  @include desktop {
+    @include font(14px, 400, 1.93, null);
+  }
+}
+
 .about {
+  z-index: 1;
   @include tablet {
     margin-left: 34px;
+  }
+
+  @include desktop {
+    margin-left: 139px;
   }
 }
 
@@ -173,7 +215,6 @@
   width: 176px;
   font-style: normal;
   @include font(14px, 700, 1.28, null);
-  display: block;
   text-align: center;
   border-radius: 20px;
   background-color: $hero-text-second;
@@ -183,6 +224,7 @@
 
   @include tablet {
     @include font(16px, 700, 1.31, null);
+    margin-top: 40px;
   }
 
   transition: background-color $hero-duration250ms $hero-time-function;
@@ -211,6 +253,10 @@
     @include font(48px, 400, 1.14, 0.04em);
   }
 
+  @include desktop {
+    @include font(58px, 400, 1.14, 0.04em);
+  }
+
   display: grid;
   margin-bottom: 16px;
 
@@ -231,7 +277,12 @@
   @include font(12px, 700, 1.66, null);
 
   @include tablet {
-    @include font(14px, 700, 1.71, null);
+    @include font(14px, null, 1.71, 0.02em);
+  }
+
+  @include desktop {
+    @include font(16px, null, 1.75, 0.02em);
+    width: 360px;
   }
 
   color: $howmade-text-color;
@@ -242,6 +293,11 @@
 
   @include tablet {
     width: 200px;
+    flex-basis: 33.3333%;
+  }
+
+  @include desktop {
+    width: 400px;
   }
 
   @media screen and (max-width: 767.98px) {
