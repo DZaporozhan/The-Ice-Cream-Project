@@ -32,7 +32,7 @@
 
   @include font(16px, 500, 1.86);
   @include desktop {
-    @include font(20px, 500, 1.86);
+    @include font(20px, null, null);
   }
 
   color: #ffffff;
@@ -61,10 +61,10 @@
   color: #ffffff;
   @include font(12px, 500, 1.86, 0.02em);
   @include tablet {
-    @include font(13px, 500, 1.86, 0.02em);
+    @include font(13px, null, null, null);
   }
   @include desktop {
-    @include font(18px, 500, 1.86, 0.02em);
+    @include font(18px, null, null, null);
   }
 
   align-items: center;
@@ -108,7 +108,7 @@
   align-items: center;
   @include font(14px, 500, 1.86);
   @include desktop {
-    @include font(20px, 500, 1.86);
+    @include font(20px, null, null);
   }
 
   color: #ffffff;
@@ -120,7 +120,7 @@
 .order__title {
   @include font(16px, 500, 1.86);
   @include desktop {
-    @include font(20px, 500, 1.86);
+    @include font(20px, null, null);
   }
 
   color: #ffffff;
@@ -175,10 +175,10 @@
     border-color: #c7133e;
   }
 }
-.order__option {
-  @media screen and (max-width: 319px) {
-  }
-}
+// .order__option {
+//   @media screen and (max-width: 319px) {
+//   }
+// }
 input {
   padding: 0;
   border: 0;
