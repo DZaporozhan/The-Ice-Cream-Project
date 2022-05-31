@@ -10,7 +10,7 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    border-color: #d41443;
+    border-color: #c7133e;
   }
 }
 .modal-form__svg {
@@ -22,7 +22,7 @@
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .modal-form__input:focus + & {
-    fill: #d41443;
+    fill: #c7133e;
   }
 }
 .modal-form__label {
@@ -144,7 +144,7 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    border-color: #d41443;
+    border-color: #c7133e;
   }
 }
 .order__input {
@@ -168,7 +168,7 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    border-color: #d41443;
+    border-color: #c7133e;
   }
 }
 .order__option {
