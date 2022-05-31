@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact" id="contact">
   <div class="container">
     <h2 class="visually-hidden">Contacts</h2>
     <ul class="contact__main">
@@ -10,7 +10,7 @@
           <p class="contact__day weekdays">Monday - Friday</p>
           <time class="contact__time" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
           <p class="contact__day weekend">Saturday - Sunday</p>
-          <time class="contact__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
+          <time class="contact__time weekend__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
           <ul class="contact__data">
             <a class="contact__link link" href="tel:+61(0)383766284">+61(0) 383 766 284 </a>
             <a class="contact__link link" href="mailto:noreply@envato.com">noreply@envato.com</a>
@@ -25,7 +25,7 @@
           <p class="contact__day">Monday - Friday</p>
           <time class="contact__time weekdays" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
           <p class="contact__day weekend">Saturday - Sunday</p>
-          <time class="contact__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
+          <time class="contact__time weekend__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
           <ul class="contact__data">
             <a class="contact__link link" href="tel:+61(0)383766284">+61(0) 383 766 284 </a>
             <a class="contact__link link" href="mailto:noreply@envato.com">noreply@envato.com</a>
@@ -40,7 +40,7 @@
           <p class="contact__day weekdays">Monday - Friday</p>
           <time class="contact__time" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
           <p class="contact__day weekend">Saturday - Sunday</p>
-          <time class="contact__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
+          <time class="contact__time weekend__time" datetime="08:00 AM - 16:00 PM">08:00 AM - 16:00 PM</time>
           <ul class="contact__data">
             <a class="contact__link link" href="tel:+61(0)383766284">+61(0) 383 766 284 </a>
             <a class="contact__link link" href="mailto:noreply@envato.com">noreply@envato.com</a>
@@ -48,9 +48,17 @@
         </div>
       </li>
     </ul>
-    <div>
-      <button class="contact__btn first-btn" type="button">Our Locations &nbsp; &#x0003E;</button>
-      <button class="contact__btn second-btn" type="button">Franchise &nbsp; &#x0003E;</button>
+    <div class="contact__button" >
+      <button class="contact__btn first-btn" type="button">Our Locations &nbsp;
+        <svg width="8px" height="9px">
+           <use href="./images/icons.svg#icon-bracket"></use>
+        </svg>
+      </button>
+      <button class="contact__btn second-btn" type="button">Franchise &nbsp; 
+        <svg width="8px" height="9px">
+          <use href="./images/icons.svg#icon-greated"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
