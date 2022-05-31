@@ -39,7 +39,7 @@
     transition: transform $hero-duration250ms $hero-time-function,
       box-shadow $hero-duration250ms $hero-time-function;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
       box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.85);
     }
   }
