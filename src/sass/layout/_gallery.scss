@@ -8,6 +8,18 @@
     padding-bottom: 120px;
   }
 
+  & .container {
+    @media screen and (min-width: 480px) {
+      padding: 0 16px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 73px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 0 134px;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
