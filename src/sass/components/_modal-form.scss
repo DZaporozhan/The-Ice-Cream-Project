@@ -111,14 +111,14 @@
   background-color: $main-text-color;
 }
 .order {
+  text-align: center;
   border: 0;
   margin: 0;
   padding: 0;
   cursor: $cursor-pointer;
 }
 .order__label {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-block;
   cursor: $cursor-pointer;
 
   align-items: center;
@@ -143,6 +143,7 @@
   margin-bottom: 10px;
 }
 .order__select {
+  display: inline-block;
   border-color: $border-color;
   outline: none;
   text-align: center;
@@ -151,7 +152,6 @@
   cursor: $cursor-pointer;
 
   @media screen and (min-width: 320px) {
-    margin-left: auto;
     width: 100px;
   }
   @include desktop {
@@ -166,7 +166,7 @@
   }
 }
 .order__input {
-  margin-left: auto;
+  display: inline-block;
   border-color: $border-color;
   outline: none;
   color: $secondary-text-color;
