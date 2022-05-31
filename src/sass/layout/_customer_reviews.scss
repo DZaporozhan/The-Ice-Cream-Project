@@ -155,6 +155,6 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
 }
-// .swiper-pagination-clickable .swiper-pagination-bullet {
-//   cursor: $cursor-pointer;
-// }
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: $cursor-pointer;
+}
