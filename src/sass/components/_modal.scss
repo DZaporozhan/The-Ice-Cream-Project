@@ -17,8 +17,12 @@
   @include tablet {
     display: flex;
     top: 50%;
-    width: 704px;
+    max-width: 704px;
     height: 626px;
+    border-radius: 10px;
+  }
+  @include desktop {
+    max-width: 1066px;
   }
   transition: transform cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -28,21 +32,66 @@
     display: block;
   }
 }
+.modal-photo__container {
+  position: relative;
+  text-align: center;
+}
+.modal-photo__thumb {
+  display: block;
+  width: 352px;
+  height: 626px;
+  @include desktop {
+    width: 533px;
+    height: 700px;
+  }
+}
+
+.modal-photo__img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.modal-photo__text {
+  position: absolute;
+  display: block;
+  width: 352px;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%);
+
+  font-family: $secondary-font-family;
+  @include font(20px, 400, 1.15, 0.01em);
+  @include desktop {
+    top: 25px;
+    @include font(30px, 400, 1.15, 0.01em);
+  }
+  text-transform: uppercase;
+
+  color: #d41443;
+}
 .modal {
   position: relative;
   top: 0;
 
   width: 95vw;
+
   @include mobile {
     min-width: 320px;
-    max-width: 352px;
+    max-width: 420px;
   }
   @include tablet {
-    position: static;
     right: 0;
+    border-radius: 0;
+    max-width: 352px;
+  }
+  @include desktop {
+    max-width: 533px;
+    height: 700px;
+    padding: 25px 50px;
+    // padding-top: 25px;
   }
   padding: 20px;
-  padding-top: 40px;
+  padding-top: 35px;
 
   background-image: url(../images/modal/modal-bg.png);
   background-color: #ffb8ca;
@@ -75,6 +124,9 @@
   margin-bottom: 12px;
   font-family: $secondary-font-family;
   @include font(20px, 400, 1.15, 0.01em);
+  @include desktop {
+    @include font(30px, 400, 1.15, 0.01em);
+  }
 
   text-align: center;
   color: #d41443;
@@ -84,9 +136,13 @@
 .modal__submit {
   display: block;
   width: 100%;
+  @include font(16px, 500, 1.31, 0.04em);
   @media screen and (min-width: 320px) {
     width: 280px;
     padding: 0px 95px;
+  }
+  @include desktop {
+    @include font(25px, 400, 1.15, 0.04em);
   }
   height: 44px;
   border-radius: 22px;
