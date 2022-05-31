@@ -69,7 +69,27 @@
 }
 
 .milk__desktop {
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // background-image: url('..//images/howmade/milk-desktop-min.png');
+
+  // @media (min-device-pixel-ratio: 2),
+  //   (-webkit-min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url('..//images/howmade/milk-desktop-2x-min.png');
+  // }
+
+  // @media (min-device-pixel-ratio: 3),
+  //   (-webkit-min-device-pixel-ratio: 3),
+  //   (min-resolution: 288dpi),
+  //   (min-resolution: 3dppx) {
+  //   background-image: url('..//images/howmade/milk-desktop-3x-min.png');
+  // }
   position: absolute;
+  left: 0;
+  top: 195px;
   @media screen and (min-width: 0px) and (max-width: 1279.98px) {
     display: none;
   }
@@ -111,6 +131,7 @@
 }
 
 .made__label {
+  cursor: $cursor;
   font-family: 'Titan One';
   font-style: normal;
 
@@ -135,6 +156,7 @@
 .made__title {
   font-family: $secondary-font-family;
   font-style: normal;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 320px) {
     @include font(20px, 400, 1.15, 0.04em);
@@ -145,12 +167,14 @@
   }
 
   @include tablet {
+    margin-bottom: 40px;
     @include tablet {
       @include font(48px, 400, 1.14, null);
     }
   }
 
   @include desktop {
+    margin-bottom: 60px;
     @include font(58px, 400, 1.14, null);
   }
 
@@ -189,6 +213,16 @@
   @include font(12px, 500, 1.58, null);
   font-style: normal;
   width: 220px;
+  // margin-bottom: 20px;
+  @media screen and (max-width: 767.98px) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
 
   // @media screen and (max-width: 768px) {
   //   margin-left: auto;
@@ -196,6 +230,9 @@
   // }
 
   @include tablet {
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
     @include font(14px, 400, 1.8, null);
     width: 334px;
   }
@@ -208,11 +245,6 @@
   }
 
   color: $howmade-text-color;
-  margin-top: 40px;
-
-  .made__text--mb {
-    margin-top: 10px;
-  }
 }
 
 .made__text--color {
@@ -227,12 +259,14 @@
 
 .about {
   z-index: 1;
+
   @include tablet {
     margin-left: 34px;
   }
 
   @include desktop {
     margin-left: 139px;
+    margin-top: 90px;
   }
 }
 
@@ -246,7 +280,10 @@
   background-color: $hero-text-second;
   color: $hero-text-first;
   border: none;
-  margin-top: 20px;
+
+  @media screen and (max-width: 767.98px) {
+    margin-top: 20px;
+  }
 
   // @media screen and (max-width: 768px) {
   //   display: block;
