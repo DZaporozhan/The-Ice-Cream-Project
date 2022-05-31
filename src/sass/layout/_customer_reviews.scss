@@ -92,7 +92,7 @@
   &::before {
     content: ' ';
     position: absolute;
-    left: 53px;
+    left: 60px;
     top: 30px;
     display: block;
     background-size: contain;
@@ -102,12 +102,12 @@
     z-index: -1;
     @media screen and (min-width: 768px) {
       left: 6px;
-      top: 20px;
+      top: 2px;
     }
 
     @media screen and (min-width: 1280px) {
-      left: 105px;
-      top: 32px;
+      left: 103px;
+      top: 15px;
     }
   }
   @media screen and (min-width: 768px) {
@@ -155,3 +155,6 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
 }
+// .swiper-pagination-clickable .swiper-pagination-bullet {
+//   cursor: $cursor-pointer;
+// }
