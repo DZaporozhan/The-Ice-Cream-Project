@@ -1,0 +1,65 @@
+.modal {
+  position: relative;
+  top: 0;
+
+  height: 100vh;
+
+  width: 95vw;
+
+  @include mobile {
+    min-width: 320px;
+    max-width: 420px;
+  }
+  @include tablet {
+    right: 0;
+    border-radius: 0;
+    max-width: 352px;
+  }
+  @include desktop {
+    max-width: 533px;
+    height: 700px;
+    padding: 25px 50px;
+    // padding-top: 25px;
+  }
+  padding: 20px;
+  padding-top: 35px;
+
+  background-image: url(../images/modal/modal-bg.png);
+  background-color: $main-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  margin: 0;
+
+  border-radius: 50%;
+  background-color: $input-bg-color;
+
+  transition: fill $timing-function-duration $timing-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-family: $secondary-font-family;
+  @include font(20px, 400, 1.15, 0.01em);
+  @include desktop {
+    @include font(30px, null, null, null);
+  }
+
+  text-align: center;
+  color: $secondary-text-color;
+
+  text-transform: uppercase;
+}
