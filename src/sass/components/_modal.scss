@@ -5,10 +5,8 @@
   width: 95vw;
   transform: translate(-50%);
   @include mobile {
-    top: 55%;
     min-width: 320px;
     max-width: 420px;
-    transform: translate(-50%, -50%);
   }
   @include tablet {
     display: flex;
@@ -16,6 +14,7 @@
     max-width: 704px;
     height: 626px;
     border-radius: 10px;
+    transform: translate(-50%, -50%);
   }
   @include desktop {
     max-width: 1066px;
