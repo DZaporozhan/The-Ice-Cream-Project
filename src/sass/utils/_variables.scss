@@ -26,7 +26,7 @@ $header-text-second: #ffffff;
 ///Products section vars
 $products-text-color: #ffffff;
 $products-pre-color: #ffa5ba;
-$products-title-color: #ffa5ba;
+$products-title-color: #d41443;
 
 $products-main-bg: #ffffff;
 $products-icecrem-bg: #ffa5ba;
@@ -51,3 +51,6 @@ $placeholder-color: rgba(255, 255, 255, 0.5);
 $accent-color: #c7133e;
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $timing-function-duration: 250ms;
+
+$cursor: url(../images/cursor/1.png), default;
+$cursor-pointer: url(../images/cursor/2.png), default;

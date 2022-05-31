@@ -2,13 +2,15 @@ body {
   font-family: $main-font-family;
   color: #000000;
   background-color: #e5e5e5;
+  cursor: $cursor;
 }
 
 button {
-  cursor: pointer;
+  cursor: $cursor-pointer;
   border: none;
 }
 
 .no-scroll {
   overflow: hidden;
+  pointer-events: none;
 }

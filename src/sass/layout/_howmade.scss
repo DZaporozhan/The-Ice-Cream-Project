@@ -20,53 +20,53 @@
   }
 }
 
-// .milk__left {
-//   position: absolute;
-//   left: 0;
+.milk__left {
+  position: absolute;
+  left: 0;
 
-//   top: 36%;
+  top: 36%;
 
-//   @media screen and (min-width: 768px) {
-//     display: none;
-//   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
-//   @media screen and (max-width: 319.98px) {
-//     top: 33%;
-//   }
+  @media screen and (max-width: 319.98px) {
+    top: 33%;
+  }
 
-//   @media screen and (min-width: 320px) and (max-width: 344.98px) {
-//     top: 37%;
-//   }
+  @media screen and (min-width: 320px) and (max-width: 344.98px) {
+    top: 37%;
+  }
 
-//   @media screen and (min-width: 345px) {
-//     top: 36%;
-//   }
-// }
+  @media screen and (min-width: 345px) {
+    top: 36%;
+  }
+}
 
-// .milk__right {
-//   position: absolute;
-//   right: 0;
+.milk__right {
+  position: absolute;
+  right: 0;
 
-//   @media screen and (min-width: 768px) {
-//     display: none;
-//   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
-//   @media screen and (max-width: 320px) {
-//     top: 31%;
-//   }
+  @media screen and (max-width: 320px) {
+    top: 31%;
+  }
 
-//   @media screen and (min-width: 345px) {
-//     top: 36%;
-//   }
+  @media screen and (min-width: 345px) {
+    top: 36%;
+  }
 
-//   @media screen and (max-width: 387.98px) {
-//     top: 36%;
-//   }
+  @media screen and (max-width: 387.98px) {
+    top: 36%;
+  }
 
-//   @media screen and (min-width: 388px) {
-//     top: 36%;
-//   }
-// }
+  @media screen and (min-width: 388px) {
+    top: 36%;
+  }
+}
 
 .milk__desktop {
   position: absolute;

@@ -5,7 +5,8 @@
   margin-right: auto;
   outline: 2px solid tomato;
 
-  @include mobile {
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
   }
 
   @include tablet {

@@ -74,7 +74,7 @@
   border-radius: 50%;
   background: $footer-bg-second;
   transition: background-color $hero-duration250ms $hero-time-function;
-
+  
   &:not(:last-child) {
     margin-right: 28px;
   }
@@ -82,7 +82,7 @@
   &:hover,
   &:focus {
     background-color: $footer-hover-first;
-  }
+      }
 }
 
 .socials__link {
@@ -91,6 +91,7 @@
   align-items: center;
   width: 32px;
   height: 32px;
+  cursor: $cursor-pointer;
   fill: #ffffff;
 }
 
@@ -113,6 +114,7 @@
 .footer__tel {
   color: $hero-text-first;
   text-decoration: none;
+  cursor: $cursor-pointer;
 }
 
 .footer__copyright {

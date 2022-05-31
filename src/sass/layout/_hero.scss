@@ -190,7 +190,7 @@
   padding: 9px 15px;
 
   @include font(8px, 400, 10/8, null);
-  cursor: pointer;
+  cursor: $cursor-pointer;
 
   background-color: $hero-text-first;
   color: $hero-text-second;
@@ -291,7 +291,7 @@
   }
 }
 
-.hero__img-main--bg {
+.hero__img-main--bg{
   position: absolute;
   z-index: -1;
   top: 86px;

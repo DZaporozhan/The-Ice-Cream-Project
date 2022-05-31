@@ -3,7 +3,7 @@
   position: fixed;
   transition: transform 0.1s linear;
   width: 100%;
-  z-index: 2;
+  z-index: 6;
   padding-top: 8px;
   @include tablet {
     padding-top: 32px;
@@ -11,6 +11,9 @@
   @include desktop {
     padding-top: 37px;
   }
+}
+.header > .container {
+  position: relative;
 }
 .header.hide {
   @include mobile {
@@ -48,7 +51,7 @@
   background-color: transparent;
   @include tablet {
     top: 5px;
-    right: 220px;
+    right: 200px;
   }
   @include desktop {
     display: none;
@@ -60,31 +63,20 @@
   right: 15px;
   padding: 0;
   background-color: transparent;
-  @include tablet {
-  }
 }
 .menu-icon {
   fill: $header-text-first;
-  //   &:hover,
-  //   &:focus {
-  //     fill: $header-text-second;
-  //   }
 }
 .close {
   fill: $header-text-second;
-  //   &:hover,
-  //   &:focus {
-  //     fill: $header-text-first;
-  //   }
 }
 .mob-menu-wrap {
   padding-left: 20px;
 }
 .mob-menu {
-  position: absolute;
-  top: 0;
+  pointer-events: all;
+  top: 50px;
   right: 0;
-  display: flex;
   background-color: $header-menu-bg-color;
   height: 100vh;
   width: 250px;
@@ -94,13 +86,14 @@
   padding-right: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  position: absolute;
   @include tablet {
     width: 254px;
   }
 }
 
 .menu-buy {
+  background-color: #fff;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -109,6 +102,12 @@
   height: 44px;
   border-radius: 22px;
   color: $header-text-first;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
   @include tablet {
     width: 186px;
   }
@@ -140,9 +139,6 @@
     color: $header-text-first;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
-.visited {
-  color: $header-text-first;
 }
 
 .menu-buy-btn {

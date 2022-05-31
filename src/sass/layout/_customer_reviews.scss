@@ -1,5 +1,13 @@
 .customer_reviews {
   background-color: #fff;
+  padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 }
 .container {
   padding: 0 20px;
@@ -11,6 +19,13 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    padding: 0 74px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 123px;
+  }
 }
 .slide-item__header {
   display: flex;
@@ -19,14 +34,7 @@
 
 .slide-img {
   border-radius: 50%;
-  margin-top: 20px;
   margin-bottom: 32px;
-}
-
-.slider-item__comment {
-  margin-bottom: 16px;
-  background-color: #fafafa;
-  padding: 43px 58px 26px 65px;
 }
 .slide-item__comment {
   position: relative;
@@ -38,6 +46,13 @@
   width: 100%;
   height: auto;
   padding: 43px 58px 26px 65px;
+  @media screen and (min-width: 768px) {
+    padding: 20px 6px 36px 6px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 32px 107px 31px 105px;
+  }
 }
 .slide-name {
   display: flex;
@@ -57,6 +72,13 @@
     background-image: url('../../src/images/krapki.png');
     width: 32px;
     height: 4px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
   }
 }
 .slide-text {
@@ -78,6 +100,24 @@
     width: 54px;
     height: 40px;
     z-index: -1;
+    @media screen and (min-width: 768px) {
+      left: 6px;
+      top: 20px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      left: 105px;
+      top: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 2.14;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.87;
   }
 }
 .gradient {
@@ -87,7 +127,7 @@
     to top,
     #e1e1e1,
     #e1e1e1 1px,
-    #fafafa 1px,
+    #fafafa 2px,
     #fafafa 31px
   );
   z-index: -2;
