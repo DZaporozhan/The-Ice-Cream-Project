@@ -1,20 +1,7 @@
-.products {
-    // margin-left: auto;
-    // margin-right: auto;
-
-    // padding-left: 20px;
-    // padding-right: 20px;
-
-    padding-top: 80px;
-    padding-bottom: 40px;
-
-    background-color: $products-main-bg;
-}
-
 .products-pre-tite {
+    display: block;
 
     margin-bottom: 15px;
-
 
     font-family: 'Titan One';
     font-style: normal;
@@ -25,11 +12,22 @@
     text-transform: uppercase;
 
     color: $products-pre-color;
+
+    @include tablet {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    @include desktop {
+        font-size: 30px;
+        line-height: 1.13;
+    }
 }
+
 
 .products-title {
 
-    margin-bottom: 8px;
+    margin-bottom: 148px;
 
 
     font-family: 'Titan One';
@@ -44,10 +42,32 @@
     color: $products-title-color;
 
     @include tablet {
-        margin-bottom: 16px;
+        margin-bottom: 154px;
+
+        font-size: 48px;
     }
+
     @include desktop {
-        margin-bottom: 0;
+        margin-bottom: 258px;
+        font-size: 58px;
+        line-height: 1.14;
+    }
+}
+
+.products {
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    background-color: $products-main-bg;
+
+    @include tablet {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-top: 60px;
     }
 }
 
@@ -59,74 +79,359 @@
 
     @include tablet {
         display: flex;
+        margin-left: -8px;
+        margin-right: -8px;
     }
 
-    &__item:not(:last-child) {
-        @include tablet {
-            margin-right: 16px;
+    @include desktop {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .product-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        background-color: var(--portfolio-overlay-bg);
+        color: var(--main-color);
+        transform: translateY(101%);
+        transition: transform var(--anim-time) var(--anim-time-line);
+        overflow-y: scroll;
+    }
+
+    &__item {
+
+        @media screen and (max-width:768px) {
+            max-width: 440px;
+            margin-left: auto;
+            margin-right: auto;
         }
+
+        position: relative;
+
+        padding: 160px 40px 40px 40px;
+        border-radius: 24px;
+        margin-bottom: 140px;
+
+        @include tablet {
+            width: calc(100% / 3 - 8px);
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 0;
+
+            padding: 118px 32px 40px 32px;
+        }
+
         @include desktop {
-            margin-right: 32px;
+            width: calc(100% / 3 - 16px);
+            margin-left: 16px;
+            margin-right: 16px;
+
+            padding: 165px 75px 60px 75px;
+        }
+
+        &--rose {
+            background-color: $products-icecrem-bg;
+        }
+
+        &--rose::before {
+
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 280px;
+            height: 280px;
+
+            background: url(../../src/images/products/prod-icecream-mob-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-icecream-mob-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-icecream-mob-3x.png);
+
+            }
+
+            @include tablet {
+
+                top: -26px;
+
+                width: 224px;
+                height: 224px;
+
+                background: url(../../src/images/products/prod-icecream-tab-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-icecream-tab-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-icecream-tab-3x.png);
+
+                }
+
+            }
+
+            @include desktop {
+
+                top: -64px;
+
+                width: 394px;
+                height: 394px;
+
+                background: url(../../src/images/products/prod-icecream-desk-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-icecream-desk-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-icecream-desk-3x.png);
+
+                }
+
+            }
+
+        }
+
+        &--coffee {
+            background-color: $products-coffee-bg;
+        }
+
+        &--coffee::before {
+
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 280px;
+            height: 280px;
+
+            background: url(../../src/images/products/prod-cofee-mob-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-cofee-mob-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-cofee-mob-3x.png);
+
+            }
+
+            @include tablet {
+
+                top: -26px;
+
+                width: 224px;
+                height: 224px;
+
+                background: url(../../src/images/products/prod-cofee-tab-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-cofee-tab-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-cofee-tab-3x.png);
+
+                }
+
+            }
+
+            @include desktop {
+
+                top: -64px;
+
+                width: 394px;
+                height: 394px;
+
+                background: url(../../src/images/products/prod-cofee-desk-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-cofee-desk-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-cofee-desk-3x.png);
+
+                }
+
+            }
+
+        }
+
+        &--pistacho {
+            background-color: $products-shakes-bg;
+        }
+
+        &--pistacho::before {
+
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 280px;
+            height: 280px;
+
+            background: url(../../src/images/products/prod-shake-mob-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-shake-mob-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-shake-mob-3x.png);
+
+            }
+
+            @include tablet {
+
+                top: -26px;
+
+                width: 224px;
+                height: 224px;
+
+                background: url(../../src/images/products/prod-shake-tab-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-shake-tab-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-shake-tab-3x.png);
+
+                }
+
+            }
+
+            @include desktop {
+
+                top: -64px;
+
+                width: 394px;
+                height: 394px;
+
+                background: url(../../src/images/products/prod-shake-desk-1x.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+
+                @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and(min-resolution: 2dppx) {
+                    background-image: url(../../src/images/products/prod-shake-desk-2x.png);
+
+                }
+
+                @media screen and (min-device-pixel-ratio: 3),
+                screen and (min-resolution: 288dpi),
+                screen and(min-resolution: 3dppx) {
+                    background-image: url(../../src/images/products/prod-shake-desk-3x.png);
+
+                }
+
+            }
+
         }
     }
 }
 
 .product-card {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // width: 100%;
-
-    text-align: center;
-    
-
-    &__thumb {
-        display: flex;
-        justify-content: center;
-        // width: 100%;
-
-        height: 140px;
-
-        position: relative;       
-        
-        background-color: transparent;
-
-        // outline: 2px solid tomato;
-    }
-
-    &__img {
-           
-        position: absolute;
-
-        transform: translatex(-50%,);
-
-        outline: 2px solid tomato;
-        
-        width: 100%;
-
-        max-width: 280px;
-
-    }
-
-    &__info {
-        padding: 160px 40px 40px 40px;
-        border-radius: 24px;
-    }
-
-    &__info--rose {
-        background-color: $products-icecrem-bg;               
-    }
-    &__info--coffee {
-        background-color: $products-coffee-bg;               
-    }
-    &__info--pistacho {
-        background-color: $products-shakes-bg;               
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    // flex-grow: 1;
 
     &__title {
 
         display: block;
-        
+
         font-family: 'Titan One';
         font-style: normal;
         font-weight: 400;
@@ -135,16 +440,42 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-    
+
         color: $products-text-color;
+
+        @include desktop {
+            font-size: 30px;
+            line-height: 1.13;
+        }
 
     }
 
+    &__title::after {
+
+        content: "";
+
+        display: block;
+        width: 100%;
+        height: 70px;
+
+        background-image: url(../../src/images/dots.svg);
+        // background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 26px, 6px;
+        background-position: center;
+    }
+
     &__icon {
+        fill: $products-text-color;
+        margin-left: 0;
+        margin-right: 0;
 
     }
 
     &__text {
+
+        flex-grow: 1;
+        margin-bottom: 32px;
 
         font-family: 'DM Sans';
         font-style: normal;
@@ -153,12 +484,47 @@
         line-height: 1.56;
         text-align: center;
         letter-spacing: 0.04em;
-    
-        color: #FFFFFF;
 
+        color: $products-text-color;
+
+        @include desktop {
+            line-height: 1.8;
+        }
+
+        @include desktop {
+            margin-bottom: 60px;
+            font-size: 16px;
+            line-height: 1.75;
+        }
     }
 
     &__btn {
+
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+
+        background: $products-main-bg;
+
+
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        fill: $products-title-color;
+
+        transition: transform $timing-function-duration $timing-function,
+            fill $timing-function-duration $timing-function,
+            background $timing-function-duration $timing-function;
+
+        &:hover {
+            background: $products-title-color;
+
+            fill: $products-main-bg;
+
+            transform: rotate(180deg);
+        }
 
     }
 }
