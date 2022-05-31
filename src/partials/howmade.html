@@ -3,8 +3,43 @@
     <label class="made__label" for="made__title">tradition and love</label>
     <h1 class="made__title" id="made__title">how it’s made?</h1>
     <div class="thumb">
+      <div class="milk__mob">
+        <picture>
+          <source
+            media="(min-width:320px)"
+            srcset="
+              ./images/howmade/bcg-image-min.png    1x,
+              ./images/howmade/bcg-image-2x-min.png 2x,
+              ./images/howmade/bcg-image-3x-min.png 3x
+            "
+          />
+          <img src="./images/howmade/bcg-image-min.png" alt="icecream" />
+        </picture>
+      </div>
+      <div class="milk__desktop">
+        <picture>
+          <source
+            media="(min-width:1280px)"
+            srcset="
+              ./images/howmade/milk-desktop-min.png    1x,
+              ./images/howmade/milk-desktop-2x-min.png 2x,
+              ./images/howmade/milk-desktop-3x-min.png 3x
+            "
+          />
+          <img src="./images/howmade/milk-desktop-min.png" alt="milk" />
+        </picture>
+      </div>
+
       <div class="about-picture">
         <picture>
+          <source
+            media="(min-width:1280px)"
+            srcset="
+              ./images/howmade/cow-desktop-min.png    1x,
+              ./images/howmade/cow-desktop-2x-min.png 2x,
+              ./images/howmade/cow-desktop-3x-min.png 3x
+            "
+          />
           <source
             media="(min-width:768px)"
             srcset="
@@ -27,24 +62,25 @@
       </div>
       <div class="about">
         <p class="made__text">
-          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
-          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+          The taste and quality of milk depend on the diet of cows. We grow our own food and create
+          a balanced menu based on it for every inhabitant of our farm.
         </p>
-        <p class="made__text made__text--color">
-          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
-          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
-          maximus. Cras massa nibh, tincidunt.
+        <p class="made__text made__text--color made__text--size">
+          At one time, the breed was bred by selecting parents with excellent health and high milk
+          yields. As a result of many years of work, the best dairy breed was obtained, which can be
+          safely called the cream of cow society.
         </p>
         <p class="made__text made__text--color made__text--mb">
-          Aliquam erat volutpat. Aenean accumsan.
+          All cows on our farm belong to the Holstein-Friesian breed.
         </p>
         <button class="made__btn" type="button">
           Read more <span class="modification">&#62;</span>
         </button>
       </div>
     </div>
-    <div class="milk__left">
-      <!-- <picture>
+
+    <!-- <div class="milk__left">
+      <picture>
         <source
           media="(min-width:320px)"
           srcset="
@@ -54,7 +90,7 @@
           "
         />
         <img src="./images/howmade/bcg-image-min.png" alt="icecream" />
-      </picture> -->
+      </picture>
       <picture>
         <source
           media="(min-width:320px)"
@@ -64,7 +100,7 @@
             ./images/howmade/milk-mob-3x-min-left.png 3x
           "
         />
-        <img src="./images/howmade/milk-mob-min-left.png" alt="icecream" />
+        <img src="./images/howmade/milk-mob-min-left.png" alt="milk" />
       </picture>
     </div>
     <div class="milk__right">
@@ -77,9 +113,9 @@
             ./images/howmade/milk-mob-3x-min-right.png 3x
           "
         />
-        <img src="./images/howmade/milk-mob-min-right.png" alt="icecream" />
+        <img src="./images/howmade/milk-mob-min-right.png" alt="milk" />
       </picture>
-    </div>
+    </div> -->
     <h2 class="visually-hidden">Advantages</h2>
     <div class="benefits">
       <ul class="benefits__list">
