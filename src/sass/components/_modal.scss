@@ -2,6 +2,7 @@
   position: absolute;
   top: 15px;
   left: 50%;
+  width: 95vw;
   transform: translate(-50%);
   @include mobile {
     top: 55%;
@@ -19,7 +20,7 @@
   @include desktop {
     max-width: 1066px;
   }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media (orientation: landscape) {
     left: 50%;
     top: 15px;
     transform: translate(-50%);
