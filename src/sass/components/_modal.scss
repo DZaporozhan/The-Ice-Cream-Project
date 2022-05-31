@@ -24,7 +24,7 @@
     top: 15px;
     transform: translate(-50%);
   }
-  transition: transform cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform $timing-function-duration $timing-function;
 }
 .modal-photo {
   display: none;
@@ -67,7 +67,7 @@
   }
   text-transform: uppercase;
 
-  color: #d41443;
+  color: $secondary-text-color;
 }
 .modal {
   position: relative;
@@ -94,7 +94,7 @@
   padding-top: 35px;
 
   background-image: url(../images/modal/modal-bg.png);
-  background-color: #ffb8ca;
+  background-color: $main-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -109,15 +109,13 @@
   padding: 6px;
   margin: 0;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: $input-bg-color;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill $timing-function-duration $timing-function;
   &:hover,
   &:focus {
-    fill: #c7133e;
-    background-color: #ffffff;
+    fill: $accent-color;
   }
 }
 .modal__title {
@@ -129,14 +127,14 @@
   }
 
   text-align: center;
-  color: #d41443;
+  color: $secondary-text-color;
 
   text-transform: uppercase;
 }
 .modal__submit {
   display: block;
   width: 100%;
-  color: #ffffff;
+  color: $main-text-color;
   @include font(16px, 500, 1.31);
   @media screen and (min-width: 320px) {
     width: 280px;
@@ -152,7 +150,7 @@
   opacity: 0.5;
   pointer-events: none;
 
-  background-color: #c7133e;
+  background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   .privacy__input:checked ~ & {
     opacity: 1;

@@ -2,15 +2,27 @@
   width: 100%;
   height: 40px;
   padding: 7px 33px;
+  color: $secondary-text-color;
+  @include font(14px, 400, 1.86);
+  @include desktop {
+    @include font(16px, null, null);
+  }
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  &::placeholder {
+    @include font(14px, 400, 1.86);
+    @include desktop {
+      @include font(16px, null, null);
+    }
+  }
+
+  border: 1px solid $border-color;
   border-radius: 78px;
   box-shadow: inset 1px 3px 10px rgba(230, 150, 169, 0.5);
   outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color $timing-function-duration $timing-function;
   &:hover,
   &:focus {
-    border-color: #c7133e;
+    border-color: $accent-color;
   }
 }
 .modal-form__svg {
@@ -20,9 +32,9 @@
 
   margin-left: 12px;
   transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill $timing-function-duration $timing-function;
   .modal-form__input:focus + & {
-    fill: #c7133e;
+    fill: $accent-color;
   }
 }
 .modal-form__label {
@@ -35,11 +47,11 @@
     @include font(20px, null, null);
   }
 
-  color: #ffffff;
+  color: $main-text-color;
   &_::placeholder {
     @include font(12px, 500, 1.86);
 
-    color: rgba(255, 255, 255, 0.5);
+    color: $placeholder-color;
   }
 }
 
@@ -58,7 +70,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: $main-text-color;
   @include font(12px, 500, 1.86, 0.02em);
   @include tablet {
     @include font(13px, null, null, null);
@@ -74,14 +86,14 @@
   width: 12px;
   height: 12px;
 
-  fill: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $input-bg-color;
+  transition: background-color $timing-function-duration $timing-function,
+    fill $timing-function-duration $timing-function;
 }
 
 .privacy__input:checked + .privacy__text .privacy__icon {
   border: none;
-  fill: #d41443;
+  fill: $accent-color;
 }
 
 .privacy-wrap {
@@ -92,7 +104,7 @@
   width: 20px;
   height: 20px;
   padding: 4px;
-  background-color: #ffffff;
+  background-color: $main-text-color;
 }
 .order {
   border: 0;
@@ -111,7 +123,7 @@
     @include font(20px, null, null);
   }
 
-  color: #ffffff;
+  color: $main-text-color;
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -123,11 +135,11 @@
     @include font(20px, null, null);
   }
 
-  color: #ffffff;
+  color: $main-text-color;
   margin-bottom: 10px;
 }
 .order__select {
-  border-color: #ffb8ca;
+  border-color: $border-color;
   outline: none;
   text-align: center;
   width: 100%;
@@ -141,17 +153,17 @@
     height: 35px;
   }
   border-radius: 10px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color $timing-function-duration $timing-function;
   &:hover,
   &:focus {
-    border-color: #c7133e;
+    border-color: $accent-color;
   }
 }
 .order__input {
   margin-left: auto;
-  border-color: #ffb8ca;
+  border-color: $border-color;
   outline: none;
-  color: #d41443;
+  color: $secondary-text-color;
   width: 65px;
   height: 25px;
   margin-left: 5px;
@@ -164,21 +176,18 @@
   }
   text-align: center;
   border-radius: 10px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color $timing-function-duration $timing-function;
   &::placeholder {
+    @include font(14px, 400, 1.86);
     @include desktop {
-      @include font(16px, 400, 1.86);
+      @include font(16px, null, null);
     }
   }
   &:hover,
   &:focus {
-    border-color: #c7133e;
+    border-color: $accent-color;
   }
 }
-// .order__option {
-//   @media screen and (max-width: 319px) {
-//   }
-// }
 input {
   padding: 0;
   border: 0;
