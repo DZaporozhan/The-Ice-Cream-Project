@@ -1,48 +1,34 @@
 .header {
-  position: relative;
-  .header-wrap {
-    // position: fixed;
-    z-index: 2;
-  }
-}
-.no-scroll {
-  overflow: hidden;
-}
-
-.header-wrap {
-  left: 0;
-  right: 0;
-  position: absolute;
-  .container {
-    // position: fixed;
-    z-index: 2;
-  }
-}
-.header-unity {
-  @media screen and (max-width: 479px) {
-    width: 100%;
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    width: 480px;
-  }
-  @media screen and (max-width: 767px) {
-    position: fixed;
-  }
+  background-color: $header-bg-color;
+  position: fixed;
+  transition: transform 0.1s linear;
+  width: 100%;
+  z-index: 2;
+  padding-top: 8px;
   @include tablet {
-    width: 768px;
+    padding-top: 32px;
   }
   @include desktop {
-    width: 1280px;
+    padding-top: 37px;
   }
 }
+.header.hide {
+  @include mobile {
+    transform: translateY(-63px);
+  }
+  @include tablet {
+    transform: translateY(-85px);
+  }
+  @include desktop {
+    transform: translateY(-90px);
+  }
+}
+
 .header-branch {
-  background-color: #ffb8ca;
-  padding: 8px 20px 5px 20px;
+  position: relative;
   @include tablet {
     display: flex;
     justify-content: space-between;
-    padding: 32px 32px 10px 32px;
-    background-color: transparent;
   }
 }
 .header-branch .menu-buy {
@@ -56,12 +42,12 @@
 }
 .menu-open-btn {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 15px;
   padding: 0;
   background-color: transparent;
   @include tablet {
-    top: 35px;
+    top: 5px;
     right: 220px;
   }
   @include desktop {
@@ -95,9 +81,11 @@
   padding-left: 20px;
 }
 .mob-menu {
+  position: absolute;
   top: 0;
   right: 0;
-  background-color: $header-bg-color;
+  display: flex;
+  background-color: $header-menu-bg-color;
   height: 100vh;
   width: 250px;
   z-index: 5;
@@ -106,7 +94,7 @@
   padding-right: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
+
   @include tablet {
     width: 254px;
   }
@@ -116,7 +104,6 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  // margin-left: 20px;
 
   width: 209px;
   height: 44px;
@@ -124,7 +111,6 @@
   color: $header-text-first;
   @include tablet {
     width: 186px;
-    // padding: 12px;
   }
 }
 .menu-buy-wrap {
@@ -159,21 +145,11 @@
   color: $header-text-first;
 }
 
-.backdrop {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(0, 0, 0, 0.2);
-  //   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  //     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .menu-buy-btn {
 }
 
 .header-nav {
-  @include mobile {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
   @include desktop {
