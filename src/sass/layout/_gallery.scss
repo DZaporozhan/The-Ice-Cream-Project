@@ -1,8 +1,12 @@
 .gallery {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
-  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%);
+  padding-bottom: 80px;
+  background-image: linear-gradient(to bottom, #fff5f6 30%, #ffffff 30%);
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 
   &__list {
     display: grid;
@@ -13,7 +17,7 @@
     @media screen and (min-width: 768px) {
       gap: 4px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       gap: 6px;
     }
   }
@@ -25,10 +29,11 @@
   & img {
     cursor: pointer;
     border-radius: 5px;
-    transition: transform $hero-duration250ms $hero-time-function;
+    transition: transform $hero-duration250ms $hero-time-function,
+      box-shadow $hero-duration250ms $hero-time-function;
     &:hover {
-      transform: scale(1.1);
-      z-index: 1000;
+      transform: scale(1.2);
+      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.85);
     }
   }
 }
@@ -45,7 +50,7 @@
   @media screen and (min-width: 768px) {
     transform: translateY(calc(-50% - 2px));
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     transform: translateY(calc(-50% - 3px));
   }
 }
@@ -77,7 +82,7 @@
   @media screen and (min-width: 768px) {
     transform: translateY(calc(-50% - 2px));
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     transform: translateY(calc(-50% - 3px));
   }
 }
@@ -107,4 +112,7 @@
   grid-column: 7 / 8;
   grid-row: 2 / 3;
   transform: translateY(-15%);
+}
+.active {
+  z-index: 5;
 }
