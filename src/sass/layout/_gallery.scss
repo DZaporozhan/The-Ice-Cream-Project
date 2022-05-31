@@ -1,8 +1,12 @@
 .gallery {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
-  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%);
+  padding-bottom: 80px;
+  background-image: linear-gradient(to bottom, #fff5f6 30%, #ffffff 30%);
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 
   &__list {
     display: grid;
@@ -13,7 +17,7 @@
     @media screen and (min-width: 768px) {
       gap: 4px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       gap: 6px;
     }
   }
@@ -46,7 +50,7 @@
   @media screen and (min-width: 768px) {
     transform: translateY(calc(-50% - 2px));
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     transform: translateY(calc(-50% - 3px));
   }
 }
@@ -78,7 +82,7 @@
   @media screen and (min-width: 768px) {
     transform: translateY(calc(-50% - 2px));
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     transform: translateY(calc(-50% - 3px));
   }
 }
