@@ -39,7 +39,7 @@
   }
 
   & img {
-    cursor: pointer;
+    cursor: $cursor-pointer;
     border-radius: 5px;
     transition: transform $hero-duration250ms $hero-time-function,
       box-shadow $hero-duration250ms $hero-time-function;
@@ -127,4 +127,8 @@
 }
 .active {
   z-index: 5;
+}
+.fslightbox-slide-btn-container:hover,
+.fslightbox-toolbar-button:hover {
+  cursor: $cursor-pointer;
 }
