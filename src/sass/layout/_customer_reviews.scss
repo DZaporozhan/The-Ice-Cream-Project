@@ -1,5 +1,13 @@
 .customer_reviews {
   background-color: #fff;
+  padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 }
 .container {
   padding: 0 20px;
