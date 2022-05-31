@@ -23,7 +23,7 @@
   }
 
   & img {
-    cursor: $cursor-pointer;
+    cursor: pointer;
     border-radius: 5px;
     transition: transform $hero-duration250ms $hero-time-function,
       box-shadow $hero-duration250ms $hero-time-function;
