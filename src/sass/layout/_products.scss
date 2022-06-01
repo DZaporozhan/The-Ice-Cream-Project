@@ -87,74 +87,112 @@
         margin-left: -16px;
         margin-right: -16px;
     }
+}
 
-    .product-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 24px;
-        font-size: 18px;
-        line-height: 1.56;
-        letter-spacing: 0.03em;
-        background-color: var(--portfolio-overlay-bg);
-        color: var(--main-color);
-        transform: translateY(101%);
-        transition: transform var(--anim-time) var(--anim-time-line);
-        overflow-y: scroll;
+.product-set__item {
+
+    position: relative;
+
+    @media screen and (max-width:768px) {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    &__item {
+    // position: relative;
 
-        @media screen and (max-width:768px) {
-            max-width: 440px;
-            margin-left: auto;
-            margin-right: auto;
+    padding: 160px 40px 40px 40px;
+    border-radius: 24px;
+    margin-bottom: 140px;
+
+    @include tablet {
+        width: calc(100% / 3 - 8px);
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 0;
+
+        padding: 118px 32px 40px 32px;
+    }
+
+    @include desktop {
+        width: calc(100% / 3 - 16px);
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding: 165px 75px 60px 75px;
+    }
+
+    &--rose {
+        background-color: $products-icecrem-bg;
+    }
+
+    &--rose::before {
+
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 280px;
+        height: 280px;
+
+        background: url(../../src/images/products/prod-icecream-mob-1x.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and(min-resolution: 2dppx) {
+            background-image: url(../../src/images/products/prod-icecream-mob-2x.png);
+
         }
 
-        position: relative;
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and(min-resolution: 3dppx) {
+            background-image: url(../../src/images/products/prod-icecream-mob-3x.png);
 
-        padding: 160px 40px 40px 40px;
-        border-radius: 24px;
-        margin-bottom: 140px;
+        }
 
         @include tablet {
-            width: calc(100% / 3 - 8px);
-            margin-left: 8px;
-            margin-right: 8px;
-            margin-bottom: 0;
 
-            padding: 118px 32px 40px 32px;
+            top: -26px;
+
+            width: 224px;
+            height: 224px;
+
+            background: url(../../src/images/products/prod-icecream-tab-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-icecream-tab-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-icecream-tab-3x.png);
+
+            }
+
         }
 
         @include desktop {
-            width: calc(100% / 3 - 16px);
-            margin-left: 16px;
-            margin-right: 16px;
 
-            padding: 165px 75px 60px 75px;
-        }
+            top: -64px;
 
-        &--rose {
-            background-color: $products-icecrem-bg;
-        }
+            width: 394px;
+            height: 394px;
 
-        &--rose::before {
-
-            content: "";
-
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            width: 280px;
-            height: 280px;
-
-            background: url(../../src/images/products/prod-icecream-mob-1x.png);
+            background: url(../../src/images/products/prod-icecream-desk-1x.png);
             background-repeat: no-repeat;
             background-size: contain;
 
@@ -162,92 +200,64 @@
             @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and(min-resolution: 2dppx) {
-                background-image: url(../../src/images/products/prod-icecream-mob-2x.png);
+                background-image: url(../../src/images/products/prod-icecream-desk-2x.png);
 
             }
 
             @media screen and (min-device-pixel-ratio: 3),
             screen and (min-resolution: 288dpi),
             screen and(min-resolution: 3dppx) {
-                background-image: url(../../src/images/products/prod-icecream-mob-3x.png);
-
-            }
-
-            @include tablet {
-
-                top: -26px;
-
-                width: 224px;
-                height: 224px;
-
-                background: url(../../src/images/products/prod-icecream-tab-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-icecream-tab-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-icecream-tab-3x.png);
-
-                }
-
-            }
-
-            @include desktop {
-
-                top: -64px;
-
-                width: 394px;
-                height: 394px;
-
-                background: url(../../src/images/products/prod-icecream-desk-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-icecream-desk-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-icecream-desk-3x.png);
-
-                }
+                background-image: url(../../src/images/products/prod-icecream-desk-3x.png);
 
             }
 
         }
 
-        &--coffee {
-            background-color: $products-coffee-bg;
+    }
+
+    &--coffee {
+        background-color: $products-coffee-bg;
+    }
+
+    &--coffee::before {
+
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 280px;
+        height: 280px;
+
+        background: url(../../src/images/products/prod-cofee-mob-1x.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and(min-resolution: 2dppx) {
+            background-image: url(../../src/images/products/prod-cofee-mob-2x.png);
+
         }
 
-        &--coffee::before {
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and(min-resolution: 3dppx) {
+            background-image: url(../../src/images/products/prod-cofee-mob-3x.png);
 
-            content: "";
+        }
 
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        @include tablet {
 
-            width: 280px;
-            height: 280px;
+            top: -26px;
 
-            background: url(../../src/images/products/prod-cofee-mob-1x.png);
+            width: 224px;
+            height: 224px;
+
+            background: url(../../src/images/products/prod-cofee-tab-1x.png);
             background-repeat: no-repeat;
             background-size: contain;
 
@@ -255,92 +265,27 @@
             @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and(min-resolution: 2dppx) {
-                background-image: url(../../src/images/products/prod-cofee-mob-2x.png);
+                background-image: url(../../src/images/products/prod-cofee-tab-2x.png);
 
             }
 
             @media screen and (min-device-pixel-ratio: 3),
             screen and (min-resolution: 288dpi),
             screen and(min-resolution: 3dppx) {
-                background-image: url(../../src/images/products/prod-cofee-mob-3x.png);
-
-            }
-
-            @include tablet {
-
-                top: -26px;
-
-                width: 224px;
-                height: 224px;
-
-                background: url(../../src/images/products/prod-cofee-tab-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-cofee-tab-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-cofee-tab-3x.png);
-
-                }
-
-            }
-
-            @include desktop {
-
-                top: -64px;
-
-                width: 394px;
-                height: 394px;
-
-                background: url(../../src/images/products/prod-cofee-desk-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-cofee-desk-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-cofee-desk-3x.png);
-
-                }
+                background-image: url(../../src/images/products/prod-cofee-tab-3x.png);
 
             }
 
         }
 
-        &--pistacho {
-            background-color: $products-shakes-bg;
-        }
+        @include desktop {
 
-        &--pistacho::before {
+            top: -64px;
 
-            content: "";
+            width: 394px;
+            height: 394px;
 
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            width: 280px;
-            height: 280px;
-
-            background: url(../../src/images/products/prod-shake-mob-1x.png);
+            background: url(../../src/images/products/prod-cofee-desk-1x.png);
             background-repeat: no-repeat;
             background-size: contain;
 
@@ -348,74 +293,112 @@
             @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and(min-resolution: 2dppx) {
-                background-image: url(../../src/images/products/prod-shake-mob-2x.png);
+                background-image: url(../../src/images/products/prod-cofee-desk-2x.png);
 
             }
 
             @media screen and (min-device-pixel-ratio: 3),
             screen and (min-resolution: 288dpi),
             screen and(min-resolution: 3dppx) {
-                background-image: url(../../src/images/products/prod-shake-mob-3x.png);
-
-            }
-
-            @include tablet {
-
-                top: -26px;
-
-                width: 224px;
-                height: 224px;
-
-                background: url(../../src/images/products/prod-shake-tab-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-shake-tab-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-shake-tab-3x.png);
-
-                }
-
-            }
-
-            @include desktop {
-
-                top: -64px;
-
-                width: 394px;
-                height: 394px;
-
-                background: url(../../src/images/products/prod-shake-desk-1x.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-
-
-                @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and(min-resolution: 2dppx) {
-                    background-image: url(../../src/images/products/prod-shake-desk-2x.png);
-
-                }
-
-                @media screen and (min-device-pixel-ratio: 3),
-                screen and (min-resolution: 288dpi),
-                screen and(min-resolution: 3dppx) {
-                    background-image: url(../../src/images/products/prod-shake-desk-3x.png);
-
-                }
+                background-image: url(../../src/images/products/prod-cofee-desk-3x.png);
 
             }
 
         }
+
+    }
+
+    &--pistacho {
+        background-color: $products-shakes-bg;
+    }
+
+    &--pistacho::before {
+
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 280px;
+        height: 280px;
+
+        background: url(../../src/images/products/prod-shake-mob-1x.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and(min-resolution: 2dppx) {
+            background-image: url(../../src/images/products/prod-shake-mob-2x.png);
+
+        }
+
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and(min-resolution: 3dppx) {
+            background-image: url(../../src/images/products/prod-shake-mob-3x.png);
+
+        }
+
+        @include tablet {
+
+            top: -26px;
+
+            width: 224px;
+            height: 224px;
+
+            background: url(../../src/images/products/prod-shake-tab-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-shake-tab-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-shake-tab-3x.png);
+
+            }
+
+        }
+
+        @include desktop {
+
+            top: -64px;
+
+            width: 394px;
+            height: 394px;
+
+            background: url(../../src/images/products/prod-shake-desk-1x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and(min-resolution: 2dppx) {
+                background-image: url(../../src/images/products/prod-shake-desk-2x.png);
+
+            }
+
+            @media screen and (min-device-pixel-ratio: 3),
+            screen and (min-resolution: 288dpi),
+            screen and(min-resolution: 3dppx) {
+                background-image: url(../../src/images/products/prod-shake-desk-3x.png);
+
+            }
+
+        }
+
     }
 }
 
@@ -496,35 +479,230 @@
             font-size: 16px;
             line-height: 1.75;
         }
+    }    
+}
+
+.product-form {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    overflow-y: scroll;
+
+
+    &__title {
+
+        margin-bottom: 12px;
+
+        font-family: $secondary-font-family;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $products-title-color;
+
+        @include font(20px, 400, 1.15, 0.01em);
+
+        @include desktop {
+            @include font(30px, null, null, null);
+        }
     }
 
-    &__btn {
-
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-
-        background: $products-main-bg;
-
-
-        padding: 0;
+    &__label {
+        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 15px;
+        color: $main-text-color;
+        cursor: $cursor-pointer;
+        font-family: inherit;
+        // order: 1;
 
-        fill: $products-title-color;
+        @include font(12px, 500, 1.86, 0.02em);
 
-        transition: transform $timing-function-duration $timing-function,
-            fill $timing-function-duration $timing-function,
-            background $timing-function-duration $timing-function;
-
-        &:hover {
-            background: $products-title-color;
-
-            fill: $products-main-bg;
-
-            transform: rotate(180deg);
+        @include tablet {
+            @include font(13px, null, null, null);
         }
 
+        @include desktop {
+            @include font(18px, null, null, null);
+        }
     }
+
+    &__span {
+        margin-left: auto;
+
+        // display: block;
+        // font-family: $secondary-font-family;
+        // order: 2;
+        // &::before {
+        //     content: "";
+        //     // display: block;
+        //     flex-grow: 1;
+        //     // height: 2   px;
+        //     width: 100%;
+        //     border-bottom: 2px dotted white;
+        //     // background-color:white;
+        //     // margin-left: 6px;
+        //     // margin-right: 6px;
+        //     // order: 1;
+        // }
+    }
+
+    // &__btn {
+    //     display: block;
+    //     color: #ffffff;
+    //     font-size: 16px;
+    //     font-weight: 500;
+    //     line-height: 1.31;
+    //     letter-spacing: 0.04em;
+    //     height: 44px;
+    //     border-radius: 20px;
+    //     padding: 0px 20px;
+    //     margin: 0px auto;
+    //     opacity: 0.5;
+    //     pointer-events: none;
+    //     background-color: #c7133e;
+    //     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    //     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    // }
+
+}
+
+.product-overlay {
+    // opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    padding-top: 40px;
+    padding-bottom: 120px;
+    overflow: hidden;
+
+
+    background-image: url(../images/modal/modal-bg.png);
+    border-radius: 24px;
+
+    // transform: translateX(-101%);
+
+    // transform: translate scale(0.5);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all $timing-function-duration $timing-function;
+
+    &--cream{
+        background-color: $main-bg-color;
+    }
+    &--coffee {
+        background-color: $products-coffee-bg;
+    }
+    &--shake {
+        background-color: $products-shakes-bg;
+    }
+    
+}
+
+.product-overlay.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product-form__label {
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    align-items:center;
+    margin-bottom: 30px;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+}
+
+.product-form__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.product-form__icon {
+    display: flex;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    background-color: $main-text-color;
+    
+    // content: '';
+    // width: 12px;
+    // height: 12px;
+    fill: $input-bg-color;
+
+    transition: background-color $timing-function-duration $timing-function,
+    fill $timing-function-duration $timing-function;
+ }
+
+.product-form__input:checked + .product-form__icon {
+    border: none;
+    fill: $accent-color;
+}
+
+.product-btn {
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    background: $products-main-bg;
+
+
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: $products-title-color;
+
+    z-index: 5;
+
+    transition: 
+    // transform $timing-function-duration $timing-function,
+        fill $timing-function-duration $timing-function,
+        background $timing-function-duration $timing-function;
+
+    &:hover {
+        background: $products-title-color;
+
+        fill: $products-main-bg;
+
+        // transform: rotate(180deg);
+    }
+}
+
+.product-btn .product-btn__arrow {
+    display: none;
+}
+
+.product-btn.is-open .product-btn__arrow {
+    display: block;
+}
+
+.product-btn.is-open .product-btn__basket {
+    display: none;
 }

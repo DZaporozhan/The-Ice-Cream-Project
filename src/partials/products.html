@@ -4,83 +4,347 @@
         <h2 class="products-title">Products</h2>
         <ul class="product-set list">
             <li class="product-set__item product-set__item--rose">
-                <a href="" class="product-card link">
+                <div class="product-card">
                     <h3 class="product-card__title">Ice Cream</h3>
                     <p class="product-card__text">Ice cream the way it should be. No preservatives, harmful substances,
                         vegetable fats, artificial colors and flavors.
                     </p>
-                    <button type="button" class="product-card__btn button">
-                        <svg class="" width="12" height="12">
-                            <use href="./images/icons.svg#icon-arrow"></use>
+                    <button type="button" class="product-btn is-open button" aria-expanded="false"
+                        aria-controls="product-overlay" data-menu-product-cream>
+                        <svg class="" width="12" height="12" aria-label="Shoose menu button">
+                            <use class="product-btn__arrow" href="./images/icons.svg#icon-arrow"></use>
+                            <use class="product-btn__basket" href="./images/icons.svg#icon-basket"></use>
                         </svg>
                     </button>
-                </a>
+                </div>
+                <div class="product-overlay product-overlay--cream" data-menu-overlay-cream>
+                    <form class="product-form" action="">
+
+                        <h3 class="product-form__title">Cone types</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Chocolate cone<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Sugar cone<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Wafer cone<span class="product-form__span">2 UAH</span>
+                        </label>
+
+                        <h3 class="product-form__title">Flavours</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Mango<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Mint<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Strawberry<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Vanila<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <h3 class="product-form__title">Toppings</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Chopped nuts<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Fudge<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Salted caremel<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Sprincles<span class="product-form__span">2 UAH</span>
+                        </label>
+                    </form>
+                </div>
             </li>
-            <!-- <div class="product-overlay">
-                <form class="product-form" action="">
-                    <h3>Cone types</h3>
-                    <label>
-                        <input type="checkbox" name="cone-types" value="music" checked />
-                        Chocolate cone
-                    </label>
-                    <label>
-                        <input type="checkbox" name="cone-types" value="music" checked />
-                        Sugar cone
-                    </label>
-                    <label>
-                        <input type="checkbox" name="cone-types" value="music" checked />
-                        Wafer cone
-                    </label>
-                    <label>
-                        <input type="checkbox" name="cone-types" value="music" checked />
-                        wafler cone
-                    </label>
-
-                    <h3>Flavours</h3>
-                    <label>
-                        <input type="checkbox" name="flavours" value="music" checked />
-                        Mango
-                    </label>
-                    <label>
-                        <input type="checkbox" name="flavours" value="music" checked />
-                        Mint
-                    </label>
-                    <label>
-                        <input type="checkbox" name="flavours" value="music" checked />
-                        Strawberry
-                    </label>
-                    <label>
-                        <input type="checkbox" name="flavours" value="music" checked />
-                        Vanila
-                    </label>
-
-                </form>
-            </div> -->
             <li class="product-set__item product-set__item--coffee">
-                <a href="" class="product-card link">
+                <div class="product-card link">
                     <h3 class="product-card__title">Ice Coffee</h3>
                     <p class="product-card__text">Coffee lovers cannot imagine a day without this wonderful drink that
                         can not only warm, but also refresh.
                     </p>
-                    <button type="button" class="product-card__btn button">
-                        <svg class="" width="12" height="12">
-                            <use href="./images/icons.svg#icon-arrow"></use>
+                    <button type="button" class="product-btn is-open button" aria-expanded="false"
+                        aria-controls="product-overlay" data-menu-product-coffee>
+                        <svg class="" width="12" height="12" aria-label="Shoose menu button">
+                            <use class="product-btn__arrow" href="./images/icons.svg#icon-arrow"></use>
+                            <use class="product-btn__basket" href="./images/icons.svg#icon-basket"></use>
                         </svg>
                     </button>
-                </a>
+                </div>
+                <div class="product-overlay product-overlay--coffee" id="product-overlay" data-menu-overlay-coffee>
+                    <form class="product-form" action="">
+
+                        <h3 class="product-form__title">Type</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Espresso<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Latte<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Fredo<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Doppio<span class="product-form__span">2 UAH</span>
+                        </label>
+
+                        <h3 class="product-form__title">Ingredients</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Pure<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Cream<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Milk<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <h3 class="product-form__title">Toppings</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Caramel<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Chocolate<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Hazelnut<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Black Forest<span class="product-form__span">2 UAH</span>
+                        </label>
+                    </form>
+                </div>
             </li>
             <li class="product-set__item product-set__item--pistacho">
-                <a href="" class="product-card link">
+                <div class="product-card link">
                     <h3 class="product-card__title">Milkshakes</h3>
                     <p class="product-card__text">Dessert drink based on milk and ice cream, one of the symbols of
                         American cuisine.
                     </p>
-                    <button type="button" class="product-card__btn button">
-                        <svg class="" width="12" height="12">
-                            <use href="./images/icons.svg#icon-arrow"></use>
+                    <button type="button" class="product-btn is-open button" aria-expanded="false"
+                        aria-controls="product-overlay" data-menu-product-shake>
+                        <svg class="" width="12" height="12" aria-label="Shoose menu button">
+                            <use class="product-btn__arrow" href="./images/icons.svg#icon-arrow"></use>
+                            <use class="product-btn__basket" href="./images/icons.svg#icon-basket"></use>
                         </svg>
                     </button>
-                </a>
+                </div>
+                <div class="product-overlay product-overlay--shake" id="product-overlay" data-menu-overlay-shake>
+                    <form class="product-form" action="">
+                        <h3 class="product-form__title">Syrup</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Cherry<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Strawberry<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Chocolate drizzle<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Coffee drizzle<span class="product-form__span">2 UAH</span>
+                        </label>
+
+                        <h3 class="product-form__title">Toppings</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Mango pieces<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Mint<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Strawberry pieces<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Cinnamon<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <h3 class="product-form__title">Toppings</h3>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Pistacho cream<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Bananas slices<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Salted caremel<span class="product-form__span">2 UAH</span>
+                        </label>
+                        <label class="product-form__label">
+                            <input class="product-form__input visually-hidden" type="checkbox" name="cone-types"
+                                value="cheсked" />
+                            <svg class="product-form__icon" width="16" height="15" class="privacy__icon">
+                                <use href="./images/icons.svg#icon-privacy"></use>
+                            </svg>
+                            Sprincles<span class="product-form__span">2 UAH</span>
+                        </label>
+                    </form>
+                </div>
             </li>
         </ul>
     </div>
