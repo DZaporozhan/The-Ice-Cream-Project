@@ -5,11 +5,15 @@
   width: 100%;
   z-index: 6;
   padding-top: 8px;
+
   @include tablet {
     padding-top: 32px;
   }
   @include desktop {
     padding-top: 37px;
+  }
+  @media screen and (min-height: 100px) and (max-height: 200px) {
+    background-color: transparent;
   }
 }
 .header > .container {
@@ -78,9 +82,9 @@
   top: 50px;
   right: 0;
   background-color: $header-menu-bg-color;
-  height: 100vh;
+  height: 110vh;
   width: 250px;
-  z-index: 5;
+  // z-index: 5;
   padding-top: 60px;
   padding-left: 0;
   padding-right: 0;
@@ -187,5 +191,38 @@
       color: $header-text-first;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+  }
+}
+
+.no-scroll > .header > .container > .header-branch > .menu-buy {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.no-scroll > .header > .container > .header-branch > .menu-open-btn {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.no-scroll {
+  > .hero {
+    pointer-events: none;
+  }
+  > .products {
+    pointer-events: none;
+  }
+  > .made {
+    pointer-events: none;
+  }
+  > .gallery {
+    pointer-events: none;
+  }
+  > .customer_reviews {
+    pointer-events: none;
+  }
+  > .contact {
+    pointer-events: none;
+  }
+  > .footer {
+    pointer-events: none;
   }
 }
