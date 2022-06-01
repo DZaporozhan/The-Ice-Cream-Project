@@ -12,13 +12,13 @@
   @media screen and (min-width: 768px) and (max-width: 1279.98px) {
     height: 70vh;
     border-radius: 0;
-    max-width: 450px;
-    height: 510px;
+    max-width: 350px;
+    height: 450px;
   }
   @include desktop {
     height: 70vh;
-    width: 650px;
-    height: 800px;
+    width: 550px;
+    height: 700px;
     padding: 25px 50px;
   }
   padding: 20px;
@@ -34,7 +34,7 @@
 .modal__close {
   position: absolute;
   z-index: 5;
-  top: 5px;
+  top: 20px;
   right: 10px;
   display: flex;
   width: 30px;
@@ -106,6 +106,27 @@
 // }
 
 .modal__picture {
-  display: flex;
-  justify-content: center;
+  @media screen and (max-width: 767.98px) {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
