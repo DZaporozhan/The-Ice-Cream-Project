@@ -1,4 +1,5 @@
 .hero {
+  padding-top: 50px;
   background-color: $hero-bg-first;
 }
 
@@ -243,10 +244,11 @@
   }
 }
 
-.hero__btn {
+.after-title__link {
   display: none;
 
   @include tablet {
+    transition: background-color $hero-duration250ms $hero-time-function;
     display: flex;
     border: transparent;
     border-radius: 50%;
@@ -274,6 +276,7 @@
     margin-bottom: 80px;
   }
 }
+
 
 .hero__img-second {
   display: none;
