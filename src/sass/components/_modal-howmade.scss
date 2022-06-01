@@ -1,6 +1,6 @@
 .modal__howmade {
   position: relative;
-  height: 100vh;
+  height: 70vh;
 
   width: 100vw;
 
@@ -13,11 +13,13 @@
     max-width: 420px;
   }
   @include tablet {
+    height: 70vh;
     border-radius: 0;
     max-width: 450px;
     height: 600px;
   }
   @include desktop {
+    height: 70vh;
     max-width: 533px;
     height: 700px;
     padding: 25px 50px;
