@@ -571,14 +571,39 @@
 }
 
 .patric__img {
+  display: none;
+
+  @include desktop{
+  display: block;
   position: absolute;
-  width: 50px;
-  top: 295px;
-  left: 322px;
+  width: 70px;
+  left: 47%;
   opacity: 0;
+  }
 }
 
+.fly{
+  animation: fly 1300ms 800ms;
+  top: -19px;
+  transform: rotate(-270deg);
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+
+  }
+
+  100% {
+    opacity: 1;
+    top: 295px;
+    transform: rotate(0deg);
+  }
+}
+
+
 .pos0 {
+  top: 295px;
   animation: pos0 1500ms 1800ms;
 }
 
@@ -593,6 +618,7 @@
 }
 
 .pos1{
+  top: 288px;
   animation: pos1 500ms 2000ms;
 }
 
@@ -607,6 +633,8 @@
 }
 
 .pos2 {
+  width: 68px;
+  top: 275px;
   animation: pos2 500ms 2100ms;
 }
 
@@ -621,6 +649,8 @@
 }
 
 .pos3 {
+  width: 68px;
+  top: 288px;
   animation: pos3 500ms 2200ms;
 }
 
@@ -635,6 +665,8 @@
 }
 
 .pos4 {
+  width: 68px;
+  top: 286px;
   animation: pos4 500ms 2300ms;
 }
 
@@ -649,6 +681,8 @@
 }
 
 .pos5 {
+  width: 68px;
+  top: 286px;
   animation: pos5 500ms 2400ms;
 }
 
@@ -663,6 +697,8 @@
 }
 
 .pos6 {
+  width: 68px;
+  top: 286px;
   animation: pos6 500ms 2500ms;
 }
 
@@ -677,6 +713,8 @@
 }
 
 .pos7 {
+  width: 68px;
+  top: 290px;
   animation: pos7 500ms 2600ms;
 }
 
@@ -691,6 +729,8 @@
 }
 
 .pos8 {
+  width: 68px;
+  top: 286px;
   animation: pos8 500ms 2700ms;
 }
 
@@ -705,6 +745,8 @@
 }
 
 .pos9 {
+  width: 68px;
+  top: 286px;
   animation: pos9 500ms 2800ms;
 }
 
@@ -719,6 +761,8 @@
 }
 
 .pos10 {
+  width: 68px;
+  top: 286px;
   animation: pos10 500ms 2900ms;
 }
 
@@ -733,6 +777,8 @@
 }
 
 .pos11 {
+  width: 70px;
+  top: 286px;
   animation: pos11 500ms 3000ms;
 }
 
@@ -747,6 +793,8 @@
 }
 
 .pos12 {
+  width: 75px;
+  top: 292px;
   animation: pos12 500ms 3100ms;
 }
 
@@ -761,6 +809,9 @@
 }
 
 .pos13 {
+  width: 106px;
+  left: 44%;
+  top: 302px;
   animation: pos13 500ms 3200ms;
 }
 
@@ -775,6 +826,9 @@
 }
 
 .pos14 {
+  width: 106px;
+  top: 302px;
+  left: 44%;
   animation: pos14 500ms 3300ms;
 }
 
@@ -789,6 +843,9 @@
 }
 
 .pos15 {
+  width: 76px;
+  top: 286px;
+  left: 48%;
   animation: pos15 500ms 3400ms;
 }
 
@@ -803,6 +860,9 @@
 }
 
 .pos16 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos16 500ms 3500ms;
 }
 
@@ -817,6 +877,9 @@
 }
 
 .pos17 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos17 500ms 3600ms;
 }
 
@@ -831,6 +894,9 @@
 }
 
 .pos18 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos18 500ms 3700ms;
 }
 
@@ -845,6 +911,9 @@
 }
 
 .pos19 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos19 500ms 3800ms;
 }
 
@@ -859,6 +928,9 @@
 }
 
 .pos20 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos20 500ms 3900ms;
 }
 
@@ -873,6 +945,9 @@
 }
 
 .pos21 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos21 500ms 4000ms;
 }
 
@@ -887,6 +962,9 @@
 }
 
 .pos22 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos22 500ms 4100ms;
 }
 
@@ -901,6 +979,9 @@
 }
 
 .pos23 {
+  width: 75px;
+  top: 292px;
+  left: 48%;
   animation: pos23 500ms 4200ms;
 }
 
@@ -915,6 +996,8 @@
 }
 
 .pos24 {
+  width: 65px;
+  top: 292px;
   animation: pos24 500ms 4300ms;
 }
 
@@ -929,6 +1012,9 @@
 }
 
 .pos25 {
+  width: 82px;
+  left: 46%;
+  top: 299px;
   animation: pos25 500ms 4400ms;
 }
 
@@ -943,6 +1029,9 @@
 }
 
 .pos26 {
+  width: 98px;
+  left: 45%;
+  top: 308px;
   animation: pos26 500ms 4500ms;
 }
 
@@ -957,6 +1046,9 @@
 }
 
 .pos27 {
+  width: 98px;
+  left: 45%;
+  top: 304px;
   animation: pos27 500ms 4600ms;
 }
 
@@ -971,6 +1063,9 @@
 }
 
 .pos28 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
   animation: pos28 500ms 4700ms;
 }
 
@@ -985,6 +1080,9 @@
 }
 
 .pos29 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
   animation: pos29 500ms 4800ms;
 }
 
@@ -999,6 +1097,9 @@
 }
 
 .pos30 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
   animation: pos30 500ms 4900ms;
 }
 
@@ -1013,10 +1114,81 @@
 }
 
 .pos31 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
   animation: pos31 500ms 5000ms;
 }
 
 @keyframes pos31 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.pos32 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
+  animation: pos32 500ms 5000ms;
+}
+
+@keyframes pos32 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.pos33 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
+  animation: pos33 500ms 5000ms;
+}
+
+@keyframes pos33 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.pos34 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
+  animation: pos34 500ms 5000ms;
+}
+
+@keyframes pos34 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.pos35 {
+  width: 98px;
+  left: 45%;
+  top: 301px;
+  animation: pos35 500ms 5000ms;
+}
+
+@keyframes pos35 {
   0% {
     opacity: 1;
   }
