@@ -1,23 +1,22 @@
 .modal__howmade {
-  position: relative;
-  height: 100vh;
-
-  width: 100vw;
-
-  left: 50%;
+  position: absolute;
   top: 50%;
+  left: 50%;
+  width: 95vw;
   transform: translate(-50%, -50%);
-
   @include mobile {
     min-width: 320px;
     max-width: 420px;
   }
+
   @include tablet {
+    height: 70vh;
     border-radius: 0;
     max-width: 450px;
     height: 600px;
   }
   @include desktop {
+    height: 70vh;
     max-width: 533px;
     height: 700px;
     padding: 25px 50px;
@@ -76,3 +75,32 @@
 
   color: $howmade-text-color;
 }
+
+// .modal__wrap {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 95vw;
+//   transform: translate(-50%, -50%);
+//   @include mobile {
+//     min-width: 320px;
+//     max-width: 420px;
+//   }
+//   @include tablet {
+//     display: flex;
+//     top: 50%;
+//     max-width: 704px;
+//     height: 626px;
+//     border-radius: 10px;
+//     transform: translate(-50%, -50%);
+//   }
+//   @include desktop {
+//     max-width: 1066px;
+//   }
+//   @media (orientation: landscape) {
+//     left: 50%;
+//     top: 15px;
+//     transform: translate(-50%);
+//   }
+//   transition: transform $timing-function-duration $timing-function;
+// }
