@@ -209,6 +209,11 @@
 // }
 
 .made__text {
+  @media screen and (max-width: 767.98px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include font(12px, 500, 1.58, null);
   font-style: normal;
   width: 220px;
@@ -281,14 +286,12 @@
   border: none;
 
   @media screen and (max-width: 767.98px) {
+    display: block;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  // @media screen and (max-width: 768px) {
-  //   display: block;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
 
   @include tablet {
     @include font(16px, 700, 1.31, null);

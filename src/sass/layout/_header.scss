@@ -50,7 +50,7 @@
 .menu-open-btn {
   position: absolute;
   top: 5px;
-  right: 15px;
+  right: 0;
   padding: 0;
   background-color: transparent;
   @include tablet {
@@ -79,24 +79,29 @@
   padding-left: 20px;
 }
 .mob-menu {
-  pointer-events: all;
-  top: 50px;
+  // pointer-events: all;
+  top: 0;
   right: 0;
   background-color: $header-menu-bg-color;
-  height: 110vh;
+  height: 100vh;
   width: 250px;
   // z-index: 5;
   padding-top: 60px;
   padding-left: 0;
   padding-right: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  transition: transform $timing-function-duration $timing-function;
   position: absolute;
   @include tablet {
     width: 254px;
   }
+  @include desktop {
+    display: none;
+  }
 }
-
 .menu-buy {
   background-color: #fff;
   font-weight: 700;
@@ -107,7 +112,7 @@
   height: 44px;
   border-radius: 22px;
   color: $header-text-first;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color $timing-function-duration $timing-function;
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -142,7 +147,7 @@
   &:hover,
   &:focus {
     color: $header-text-first;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $timing-function-duration $timing-function;
   }
 }
 
@@ -187,44 +192,59 @@
     &:hover,
     &:focus {
       color: $header-text-first;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color $timing-function-duration $timing-function;
     }
+  }
+}
+@media screen and (max-width: 1279px) {
+  .header > .container > .backdrop.is-hidden {
+    transform: none;
   }
 }
 
 .no-scroll {
-  > .header > .container > .header-branch > .menu-buy {
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-  }
-  > .header > .container > .header-branch > .menu-open-btn {
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-  }
-  > .header > .container > .mob-menu > .mob-menu-wrap > .menu-close-btn {
-    display: block;
-  }
-  > .hero {
-    pointer-events: none;
-  }
-  > .products {
-    pointer-events: none;
-  }
-  > .made {
-    pointer-events: none;
-  }
-  > .gallery {
-    pointer-events: none;
-  }
-  > .customer_reviews {
-    pointer-events: none;
-  }
-  > .contact {
-    pointer-events: none;
-  }
-  > .footer {
-    pointer-events: none;
+  @media screen and (max-width: 1279px) {
+    > .header > .container > .backdrop {
+      // transition: transform $timing-function-duration $timing-function,
+      //   opacity $timing-function-duration $timing-function;
+      overflow: hidden;
+    }
+    > .header > .container > .backdrop > .mob-menu {
+      transform: translateX(0);
+    }
+    > .header > .container > .header-branch > .menu-buy {
+      opacity: 0;
+      transition: opacity $timing-function-duration $timing-function;
+      pointer-events: none;
+    }
+    > .header > .container > .header-branch > .menu-open-btn {
+      opacity: 0;
+      transition: opacity $timing-function-duration $timing-function;
+      pointer-events: none;
+    }
+    > .header > .container > .backdrop > .mob-menu > .mob-menu-wrap > .menu-close-btn {
+      display: block;
+    }
+    > .hero {
+      pointer-events: none;
+    }
+    > .products {
+      pointer-events: none;
+    }
+    > .made {
+      pointer-events: none;
+    }
+    > .gallery {
+      pointer-events: none;
+    }
+    > .customer_reviews {
+      pointer-events: none;
+    }
+    > .contact {
+      pointer-events: none;
+    }
+    > .footer {
+      pointer-events: none;
+    }
   }
 }
