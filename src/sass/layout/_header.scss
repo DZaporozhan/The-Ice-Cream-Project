@@ -204,11 +204,11 @@
 
 .no-scroll {
   @media screen and (max-width: 1279px) {
-    // > .header > .container > .backdrop {
-    //   transition: transform $timing-function-duration $timing-function,
-    //     opacity $timing-function-duration $timing-function;
-    //   overflow: hidden;
-    // }
+    > .header > .container > .backdrop {
+      // transition: transform $timing-function-duration $timing-function,
+      //   opacity $timing-function-duration $timing-function;
+      overflow: hidden;
+    }
     > .header > .container > .backdrop > .mob-menu {
       transform: translateX(0);
     }
