@@ -183,7 +183,7 @@
 
 .hero__link {
   position: relative;
-  transition: color $hero-duration250ms $hero-time-function;
+  transition: background-color $hero-duration250ms $hero-time-function;
   display: block;
   max-width: 86px;
   border-radius: 20px;
