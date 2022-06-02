@@ -13,3 +13,47 @@ button {
 .no-scroll {
   overflow: hidden;
 }
+// Scrollbar
+
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $products-main-bg $products-title-color;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: $products-title-color;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: $hero-btn-first;
+}
+
+/* Works on Chrome, Edge, and Safari */
+@include desktop {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
