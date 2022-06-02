@@ -13,3 +13,34 @@ button {
 .no-scroll {
   overflow: hidden;
 }
+
+// Scrollbar
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $products-main-bg $products-title-color;
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: $products-title-color;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: $hero-btn-first;
+}
