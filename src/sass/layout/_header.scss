@@ -67,6 +67,7 @@
   right: 15px;
   padding: 0;
   background-color: transparent;
+  display: none;
 }
 .menu-icon {
   fill: $header-text-first;
@@ -191,16 +192,20 @@
   }
 }
 
-.no-scroll > .header > .container > .header-branch > .menu-buy {
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.no-scroll > .header > .container > .header-branch > .menu-open-btn {
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .no-scroll {
+  > .header > .container > .header-branch > .menu-buy {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  > .header > .container > .header-branch > .menu-open-btn {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  > .header > .container > .mob-menu > .mob-menu-wrap > .menu-close-btn {
+    display: block;
+  }
   > .hero {
     pointer-events: none;
   }
